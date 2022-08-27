@@ -1,0 +1,25 @@
+.slider {
+    background-image: url('../images/Fade In/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: slide 12s infinite;
+    transition: 1500ms;
+}
+@keyframes slide {
+    20% {
+        background-image: url('../images/Fade In/1.jpg');
+    }
+    40% {
+        background-image: url('../images/Fade In/2.jpg');
+    }
+    60% {
+        background-image: url('../images/Fade In/3.jpg');
+    }
+    80% {
+        background-image: url('../images/Fade In/4.jpg');
+    }
+    100% {
+        background-image: url('../images/Fade In/5.jpg');
+    }
+}
