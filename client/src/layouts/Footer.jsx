@@ -53,27 +53,53 @@ export default function Footer() {
       </div>
       {/* Content Lists */}
       <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-        {Fbuttons.map((item) => (
-          <div 
-          className="lg:w-1/4 md:w-1/2 w-full px-4"
-          key={item.id}>
-          <h2         
-          className="title-font font-medium text-gray-900 tracking-widest text-lg mb-2">{item.title}</h2>
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">  
+        <h2  className="title-font font-medium text-gray-900 tracking-widest text-lg mb-2">About</h2>
           <hr className='border-primary-500  w-2/4 m-auto mb-3 lg:m-0 lg:mb-3'/>
           <nav className="list-none mb-10 space-y-1">
-            {/* {llinks =item.links.length} */}
-            {item.links.map((sitem) =>(
-                <li
-                key={sitem}>
+              <li>
                 <Link 
-                to={checkPage}
-                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">{sitem}</Link>
+                to='/about'
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Company Profile</Link>
               </li> 
-            ))}
-           
-          </nav>
+              <li>
+                <Link 
+                to='/contact'
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Contact Us</Link>
+              </li> 
+              <li>
+                <Link 
+                to='/order'
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Order</Link>
+              </li> 
+          </nav>  
         </div>
-        ))}
+
+        <div className="lg:w-1/4 md:w-1/2 w-full px-4">  
+        <h2  className="title-font font-medium text-gray-900 tracking-widest text-lg mb-2">Gallery</h2>
+          <hr className='border-primary-500  w-2/4 m-auto mb-3 lg:m-0 lg:mb-3'/>
+          <nav className="list-none mb-10 space-y-1">
+              <li>
+                <Link 
+                to='/gallery'
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Gallery</Link>
+              </li> 
+          </nav>  
+        </div>
+
+
+        <div className="lg:w-1/4 md:w-1/2 w-full px-4">  
+        <h2  className="title-font font-medium text-gray-900 tracking-widest text-lg mb-2">Services</h2>
+          <hr className='border-primary-500  w-2/4 m-auto mb-3 lg:m-0 lg:mb-3'/>
+          <nav className="list-none mb-10 space-y-1">
+              <li>
+                <Link 
+                to='/order'
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Order</Link>
+              </li> 
+          </nav>  
+        </div>
+
       </div>
     </div>
 

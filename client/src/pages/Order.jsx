@@ -1,92 +1,72 @@
 import React from 'react'
 import '../assets/styles/Order.css'
 
-import {
-  Label,
-  TextInput,
-  Button,
-  Select
-  // No
+import { TextInput, Select } from '@mantine/core'
 
-} from 'flowbite-react'
 import img1 from '../assets/images/Order/order.webp'
+import { useEffect } from 'react'
 
 
 export default function Order() {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
     <div className='flex flex-col'>
 
-      <div class="container1 w-full px-5 md:px-20 ">
-        <div class="shape-blob"></div>
-        <div class="shape-blob one"></div>
-        <div class="shape-blob two"></div>
+      <div className="container1 w-full px-5 md:px-20 ">
+        <div className="shape-blob"></div>
+        <div className="shape-blob one"></div>
+        <div className="shape-blob two"></div>
 
-        <div className='flex flex-col gap-5 bg-gray-200 pb-10 h-auto  min-h-screen rounded-2xl w-full mx-auto my-5 z-20  bg-opacity-80 backdrop-blur-lg py-5 px-10'>
+        <div className='flex flex-col gap-5 bg-gray-200 pb-10 h-auto  min-h-screen rounded-2xl w-full mx-auto my-5 z-20  bg-opacity-80 backdrop-blur-lg py-5 px-2 md:px-10'>
           <div className='flex flex-col gap-5'>
             <h1 className='text-primary-500 font-semibold text-4xl'>Order</h1>
             <hr className='w-1/5 border-2 border-primary-500 rounded-full ' />
           </div>
           <div className='w-full grid md:grid-cols-2'>
-            <form className="flex flex-col gap-4">
-
-              <div>
-                <div className="mb-2 block">
-                  <Label
-                    htmlFor="Name"
-                    value="Name"
-                  />
-                </div>
-                <TextInput
-                  id="name"
-                  type="name"
-                  placeholder="Name"
-                  required={true}
-                />
-              </div>
-
-              <div>
-                <div className="mb-2 block">
-                  <Label
-                    htmlFor="phonenumber"
-                    value="Phone Number"
-                  />
-                </div>
-                <TextInput
-                  id="phonenumber"
-                  type="number"
-                  placeholder="Phone Number"
-                  required={true}
-                />
-              </div>
-
-              <div className='mb-2 block'>
-                <Label
-                  htmlFor="Product"
-                  value="Product"
-                />
-              <Select id="Product">
-                <React.Fragment key=".0">
-                    <option>
-                      Banner
-                    </option>
-                    <option>
-                      Brouchers
-                    </option>
-                    <option>
-                      Cake Toppers
-                    </option>
-                    <option>
-                      LEDs
-                    </option>
-                </React.Fragment>
-              </Select>
-              </div>
-             
-              <Button style={{backgroundColor: '#008059'}} className="bg-primary-500" type="submit">
-                Order
-              </Button>
-            </form>
+            <div className='flex flex-col gap-5 md:pr-10'>
+              <TextInput
+                placeholder='Your Name'
+                label='Name'
+                size='lg'
+                required
+              />
+              <TextInput
+                placeholder='09XXXXXXXX'
+                label='Phone Number'
+                size='lg'
+                required
+              />
+              <TextInput
+                placeholder='Your Email'
+                label='Email'
+                size='lg'
+                required
+              />
+              <Select
+                label="Pick Product"
+                placeholder="Pick your Product"
+                size='lg'
+                data={[
+                  { value: 'Cards', label: 'Bussiness Cards' },
+                  { value: 'Banner', label: 'Banner' },
+                  { value: 'Broucher', label: 'Broucher' },
+                  { value: 'Sign', label: 'Signs' },
+                  { value: 'Foam', label: '3D Foam' },
+                  { value: 'Veichle', label: 'Veichle Graphics' },
+                  { value: 'LED', label: 'P6 LEDS' },
+                  { value: 'Calanders', label: 'Calander' },
+                  { value: 'Car', label: 'Car Branding' },
+                  { value: 'Cake', label: 'Cake Topper' },
+                  { value: 'Full', label: 'Full Branding' },
+                  { value: 'Other', label: 'Other' },
+                ]}
+              />
+              <button className='px-4 py-3 bg-primary-500 shadow-md hover:bg-primary-600 hover:shadow-xl text-xl text-white'>Order</button>
+            </div>
             <div className="hidden md:flex overflow-hidden rounded-xl px-20">
               <img className='rounded-xl' src={img1} alt="Order Image" />
             </div>

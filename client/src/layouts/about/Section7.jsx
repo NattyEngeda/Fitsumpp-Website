@@ -15,9 +15,6 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 
 
-
-
-
 export default function Section7() {
   return (
     <div className='w-full flex flex-col min-h-screen  py-5 sm:px-5 md:px-20'>
@@ -53,7 +50,6 @@ export default function Section7() {
                 navigation={false}
                 slidesPerView={1}
                 spaceBetween={30}
-                
                 autoplay={{
                     delay: 1500,
                 }}
@@ -65,8 +61,10 @@ export default function Section7() {
                 >
               {
             Awards.map((item) => (
-              <SwiperSlide className='px-10 py-10'><div
-                key={item.id}
+              <SwiperSlide 
+              key={item.id}
+              className='px-10 py-10'
+              ><div
                 className='w-full bg-gray-100 h-full py-10 rounded-none shadow-md border border-gray-200 hover:shadow-2xl cursor-pointer flex justify-center items-center '>
                 <img
                   className='w-auto h-full'

@@ -1,9 +1,10 @@
 import React,{ useEffect, useState } from 'react'
 import { Fragment } from 'react'
-import { Popover,Transition } from '@headlessui/react'
+import { Popover,Transition,Disclosure } from '@headlessui/react'
 import { Link, NavLink,useNavigate } from 'react-router-dom'
 import clogo from '../assets/images/logo/Fitsum letter F only logo.png'
 import logo from '../assets/images/logo/F Only Colored Logo.png'
+// import MyLink form './MyLInk';
 import { 
     MenuIcon,
     HomeIcon,
@@ -78,6 +79,7 @@ export default function Header() {
 
 
     let Navigate = useNavigate();
+
     const changePage = () => {
         let path = '/order'
         Navigate(path);
@@ -139,7 +141,8 @@ export default function Header() {
       >
         {/* Mobile Pop Up Menu */}
         {/* {console.log(<Popover.Panel/>)} */}
-        <Popover.Panel focus id='menu' className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <Disclosure>
+        <Disclosure.Panel focus id='menu' className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className='rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 bg-gray-50 divide-y-2 divide-gray-50 '>
                 <div className='pt-5 pb-6 px-5'>
                     <div className='flex items-center justify-between'>
@@ -163,16 +166,22 @@ export default function Header() {
                         <nav className='grid gap-y-8'>
                             {/* Listing mobileMenuItems using map inside the Popover Panel */}
                             {mobileMenuItems.map((item) => (
-                                <Link
-                                    onClick={check}
+                            //    <Disclosure.Button as={MyLink} href="/home">
+                            //    Home
+                            //  </Disclosure.Button>
+                               <Disclosure.Button
+                                    onClick={
+                                        Navigate('/order')
+                                    }
                                     key={item.name}
-                                    to={item.to}
+                                    as='a'
+                                    href={item.to}
                                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 border-b border-gray-50"
                                 >
                                     <item.icon className='flex-shrink-0 h-6 w-6 text-primary-500' aria-hidden="true" />
                                     <span className='ml-3 text-base font-medium text-primary-500'>{item.name}</span>
                                 <br className='border border-primary-400 text-primary-500 bg-primary-500' />
-                                </Link>
+                                </Disclosure.Button>
                             ))}
                         </nav>
                     </div>
@@ -185,7 +194,8 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </Popover.Panel>
+        </Disclosure.Panel>
+        </Disclosure>
         </Transition>
    </Popover>
   )

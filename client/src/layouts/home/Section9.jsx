@@ -21,12 +21,14 @@ export default function Section9() {
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.130074057898!2d38.791668391574696!3d9.021367451232171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850fa5a07cab%3A0x466c325b95cec544!2sFitsum%20Printing%20%26%20Advertising!5e0!3m2!1sen!2set!4v1661630845731!5m2!1sen!2set" 
                 width="100%" 
-                height="600px" 
+                className='h-96 md:h-[30rem]'
+                // height="600px" /
                 // style="border:0" 
                 allowFullScreen="" 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
+                
             {/* <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1970.2339339210073!2d38.79311611849361!3d9.021013046038462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1658578185564!5m2!1sen!2set" 
                 width="100%" 

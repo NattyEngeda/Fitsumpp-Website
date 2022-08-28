@@ -54,7 +54,7 @@ export default function Section9() {
             </div>
             {/* Mobile View Content */}
             <div className='sm:hidden'>
-                {/* <Swiper
+                <Swiper
                     navigation={false}
                     slidesPerView={1}
                     spaceBetween={30}
@@ -69,9 +69,10 @@ export default function Section9() {
                 >
                     {
                         MachineNames.map((item) => (
-                        <SwiperSlide className='px-5 pb-8'>
+                        <SwiperSlide 
+                        key={item.id}
+                        className='px-5 pb-8'>
                             <div
-                                key={item.id}
                                 className='w-full bg-gray-100 h-full py-0 rounded-none shadow-md border border-gray-200 hover:shadow-2xl cursor-pointer flex flex-col justify-center items-center '>
                                     <img
                                     className='w-auto h-full'
@@ -84,7 +85,7 @@ export default function Section9() {
                         </SwiperSlide>
                         ))
                     }
-                </Swiper> */}
+                </Swiper>
             </div>
         </div>
     )

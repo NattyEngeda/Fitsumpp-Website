@@ -1,5 +1,8 @@
 import React from 'react'
 
+import car1 from '../../assets/images/delivery/car1new.webp'
+import car2 from '../../assets/images/delivery/car2new.webp'
+
 // Images 
 import delivery from '../../assets/images/About Us/Icons/1delivery.png';
 
@@ -17,16 +20,16 @@ export default function Section8() {
             </div>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 h-auto gap-1 bg-black'>
-            <div className='bg-red-600'>
+            <div className='bg-white'>
                 <img 
                 className='w-full'
-                src="https://eversuccessauto.com/wp-content/uploads/2018/01/revo-double1.png.jpg" 
+                src={car1}
                 alt="Car Image 1" />
             </div>
-            <div className='bg-white flex justify-center items-center'>
+            <div className='bg-blue-400 flex justify-center items-center'>
             <img 
                 className='h-96'
-                src="https://carnetwork.s3.ap-southeast-1.amazonaws.com/file/da999ceb904940228fcad42f73febbf6.jpg" 
+                src={car2}
                 alt="Car Image 2" />
             </div>
 

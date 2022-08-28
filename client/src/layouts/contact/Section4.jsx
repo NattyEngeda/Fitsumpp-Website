@@ -15,7 +15,7 @@ export default function Section4() {
                     <div className='flex flex-col items-start gap-2'>
                             <h1 className='text-2xl font-semibold'>Address</h1>
                             <div className='flex flex-col gap-1 text- font-light'>
-                                <p>Building Name</p>
+                                <p>Meseret Building</p>
                                 <p>Kenenisa Ave</p>
                                 <p>Addis Ababa, Ethiopia</p>
                             </div>
@@ -23,7 +23,7 @@ export default function Section4() {
                         <div className='flex flex-col items-start gap-2'>
                             <h1 className='text-2xl  font-semibold'>Phone / Fax</h1>
                             <div className='flex flex-col gap-1 font-light'>
-                                <p>+251 911 753 962</p>
+                                <a href='tel:+251911753962' className='hover:underline hover:text-primary-500'>+251 911 753 962</a>
                                 <p>Fax Number</p>
                             </div>
                         </div>

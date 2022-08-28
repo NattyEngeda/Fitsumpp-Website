@@ -22,7 +22,7 @@ export default function Contact() {
       {/* Section Three */}
         <Section3 />
       {/* Section Four */}
-      <Section4/>
+         <Section4/>
       {/* </div> */}
     </div>
   )

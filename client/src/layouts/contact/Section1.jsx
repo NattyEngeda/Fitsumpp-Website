@@ -31,9 +31,9 @@ export default function Section1() {
                     <p className='text-gray-600'>Call us through these phones and ask any questions you want to know about </p>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <p className='text-secondary-500 font-semibold'>+251 911 753 962</p> 
-                    <p className='text-secondary-500 font-semibold'>+251 902 276 627</p>
-                    <p className='text-secondary-500 font-semibold'>+251 902 278 827</p>
+                    <a href='tel:+251911753962' className='text-secondary-500 font-semibold hover:underline'>+251 911 753 962</a> 
+                    <a href='tel:+251902276627' className='text-secondary-500 font-semibold hover:underline'>+251 902 276 627</a>
+                    <a href='tel:+251902278827' className='text-secondary-500 font-semibold hover:underline'>+251 902 278 827</a>
                 </div>
             </div>
             {/* Box Two */}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect,useRef } from 'react'
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import aos from 'aos';
 import "aos/dist/aos.css"
@@ -17,11 +17,16 @@ import Section9 from '../layouts/home/Section9';
 
 
 export default function Home() {
-  
+  const myRef = useRef(null)
+
+  const executeScroll = () => myRef.current.scrollIntoView() 
   useEffect(() => {
     window.scrollTo(0, 0)
+    executeScroll
     aos.init({duration: 1000})
   }, []);
+
+  
 
   return (
   <div className='bg-gray-50 flex flex-col overflow-hidden'>
@@ -30,7 +35,9 @@ export default function Home() {
       <Section3/>
       {/* <Section2/> */}
       <Section4/>
+      <div ref={myRef}>
       <Section5/>
+      </div>
       {/* <Section6/> */}
       <Section7/>
       <Section8/>
