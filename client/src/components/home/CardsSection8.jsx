@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import VisibilitySensor from 'react-visibility-sensor'
-import CountUp from 'react-countup'
+import React, { useState, useRef, useEffect } from 'react'
+import { useSpring, animated, to } from '@react-spring/web'
+import { useGesture } from 'react-use-gesture'
 import {
     FcCalendar,
     FcWorkflow,

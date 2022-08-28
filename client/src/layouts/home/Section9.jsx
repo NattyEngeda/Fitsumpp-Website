@@ -58,10 +58,12 @@ export default function Section9() {
                             <LocationMarkerIcon className='w-10 text-primary-500'/>
                             <h1 className='text-3xl text-primary-500'>Address</h1>
                         </div>
-                        <button className='bg-primary-500 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</button>
+                        {/* <button className='bg-primary-500 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</button> */}
+                        <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='bg-primary-500 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</a>
+                        
                         <div>
                             <p>Shola</p>
-                            <p>NULL Building</p>
+                            <p>Meseret Building</p>
                             <p>Kenenisa Ave</p>
                             <p>Addis Ababa, Ethiopia</p>
                         </div>
