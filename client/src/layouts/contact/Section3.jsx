@@ -12,7 +12,7 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 
 export default function Section3() {
   return (
-    <div className='w-full h-auto bg-white px-5 md:px-32 py-10'>
+    <div id='office' className='w-full h-auto bg-white px-5 md:px-32 py-10'>
       <Accordion
         className='bg-white'
       >

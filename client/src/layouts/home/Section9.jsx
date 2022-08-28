@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 // Icons 
 import { ClockIcon, LocationMarkerIcon,
     PhoneIcon } from '@heroicons/react/outline'
@@ -45,11 +45,11 @@ export default function Section9() {
                             <PhoneIcon className='w-10 text-primary-500'/>
                             <h1 className='text-3xl text-primary-500'>Contact</h1>
                         </div>
-                        <button className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</button>
+                        <a href='tel:+251911753962' className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150 cursor-pointer  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</a>
                         <div className='flex flex-col gap-1'>
-                            <p>+251 911 753 962</p> 
-                            <p>+251 902 276 627</p>
-                            <p>+251 902 278 827</p>
+                            <a href='tel:+251911753962' className='hover:underline hover:text-primary-500 cursor-pointer'>+251 911 753 962</a> 
+                            <a href='tel:+251902276627' className='hover:underline hover:text-primary-500 cursor-pointer'>+251 902 276 627</a>
+                            <a href='tel:+251902278827' className='hover:underline hover:text-primary-500 cursor-pointer'>+251 902 278 827</a>
                         </div>
                     </div>
                     {/* Address Section  */}
@@ -72,7 +72,9 @@ export default function Section9() {
                             <ClockIcon className='w-10 text-primary-500'/>
                             <h1 className='text-3xl text-primary-500'>Office Hours</h1>
                         </div>
-                        <button className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</button>
+                        <Link 
+                        to='/contact#office'
+                        className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</Link>
                         <div>
                             <p>Monday - Friday: 2am - 12pm</p>
                             <p>Saturday: 2am - 6am</p>
