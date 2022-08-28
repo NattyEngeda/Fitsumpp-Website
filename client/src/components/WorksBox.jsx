@@ -34,6 +34,14 @@ export default function WorksBox(props) {
             <div>
               <h1>Examples: </h1>
             </div>
+            <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-5'>
+                <div className='h-52 bg-blue-500 w-full'>
+
+                </div>
+                <div className='h-52 bg-yellow-500 w-full'>
+
+                </div>
+            </div>
             <div>
               <button onClick={changePage} className='px-3 py-3 bg-primary-500 hover:bg-primary-600 hover:shadow-lg text-white text-lg'>Order now</button>
             </div>

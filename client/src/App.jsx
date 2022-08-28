@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Router>
     <Header/>
-        <main className='min-h-screen'>
+        <main className='min-h-screen relative'>
           <Routes>
             <Route path='/' element={ <Home/> }/>
             <Route path='/about/*' element={ <About/>} />

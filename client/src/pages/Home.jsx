@@ -35,7 +35,9 @@ export default function Home() {
       <Section7/>
       <Section8/>
       <Section9/>
+      {/* <div className='absolute bottom-2 right-2 bg-blue-400 w-10 h-10'>
 
+      </div> */}
     </div>
   )
 }

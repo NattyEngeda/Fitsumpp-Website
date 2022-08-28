@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
 import { Fragment } from 'react'
 import { Popover,Transition } from '@headlessui/react'
 import { Link, NavLink,useNavigate } from 'react-router-dom'
@@ -15,6 +15,7 @@ import {
     PhotographIcon
 } from '@heroicons/react/outline'
 import useScrollPosition from '../hooks/useScrollPosition';
+import useWindowResize from '../hooks/useWindowResize'
 
 
 import Home from '../pages/Home'
@@ -54,6 +55,8 @@ function classNames(...classes) {
   }
 
 export default function Header() {
+
+    const windowWidth = useWindowResize();
 
     const check = () =>{
         let menu=document.getElementById('menu');
@@ -110,7 +113,7 @@ export default function Header() {
                     <ListItems link="/about" name="Profile"  />
                     <ListItems link="/contact" name="Contact Us"  />
                     <ListItems link="/order" name="Order"  />
-
+                    <div className='bg-blue-500 text-white px-4 py-1'>{windowWidth}</div>
                 </Popover.Group>
             </div>
 
