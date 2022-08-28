@@ -15,7 +15,7 @@ export default function WorksBox(props) {
 
   return (
     // Full Box
-    <div className='w-auto h-auto bg-white shadow-xl py-10 flex flex-col items-center gap-5 px-5'>
+    <div className='w-auto h-auto bg-white shadow-xl py-10 pb-28 flex flex-col items-center gap-8 px-5'>
       <Modal
         centered
         size="xl"
@@ -57,13 +57,13 @@ export default function WorksBox(props) {
         <p className='text-3xl font-bold'>{props.name}</p>
       </div>
       {/* Center Content */}
-      <div>
+      <div className='px-5'>
         <p>{detail}</p>
       </div>
       {/* Last Content */}
       <div>
         <Group >
-        <Button onClick={() => setOpened(true)} className='h-14 rounded-none bg-primary-500 hover:bg-primary-700 shadow-md hover:shadow-xl text-white'>Learn More</Button>
+        <Button onClick={() => setOpened(true)} className='h-14 px-10 rounded-none bg-primary-500 hover:bg-primary-700 shadow-md hover:shadow-xl text-white'>Learn More</Button>
         </Group>
       </div>
     </div>
