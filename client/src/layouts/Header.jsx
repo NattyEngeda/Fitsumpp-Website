@@ -172,7 +172,7 @@ export default function Header() {
                                <Popover.Button
                                     key={item.name}
                                     as='a'
-                                    onClick={close()}
+                                    onClick={close}
                                     href={item.to}
                                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 border-b border-gray-50"
                                 >

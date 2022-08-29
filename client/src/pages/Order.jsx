@@ -31,25 +31,25 @@ export default function Order() {
               <TextInput
                 placeholder='Your Name'
                 label='Name'
-                size='lg'
+                size='md'
                 required
               />
               <TextInput
                 placeholder='09XXXXXXXX'
                 label='Phone Number'
-                size='lg'
+                size='md'
                 required
               />
               <TextInput
                 placeholder='Your Email'
                 label='Email'
-                size='lg'
+                size='md'
                 required
               />
               <Select
                 label="Pick Product"
                 placeholder="Pick your Product"
-                size='lg'
+                size='md'
                 data={[
                   { value: 'Cards', label: 'Bussiness Cards' },
                   { value: 'Banner', label: 'Banner' },

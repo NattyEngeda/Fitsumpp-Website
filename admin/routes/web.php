@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+Route::get('/home/user',[MainController::class, 'user']);
+Route::get('/home/image',[MainController::class, 'image']);
+Route::get('/home/order',[MainController::class, 'order']);
+
+
+
+
+Auth::routes();
+// Auth::routes(['register' => false]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
