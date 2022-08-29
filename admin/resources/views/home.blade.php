@@ -13,9 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="flex flex-row gap-2">
+                    <div class="grid grid-cols-12 gap-2 w-full border border-black">
+                       <div class="col-span-2">
                         <x-sidebar/>
-                        <div>
+                       </div>
+                        <div class="col-span-10">
                                 @yield('user')
                                 @yield('image')
                                 @yield('order')

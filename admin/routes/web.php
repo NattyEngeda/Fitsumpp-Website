@@ -22,6 +22,8 @@ Route::get('/home/user',[MainController::class, 'user']);
 Route::get('/home/image',[MainController::class, 'image']);
 Route::get('/home/order',[MainController::class, 'order']);
 
+Route::post('/home/order/accept', [MainController::class, 'orderAccept'])->name('acceptOrder');
+Route::post('/home/order/delete', [MainController::class, 'orderDelete'])->name('deleteOrder');
 
 
 

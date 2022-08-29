@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->nullable();
             $table->string('phone_number');
-            $table->string('desc');
+            $table->string('product');
+            $table->string('desc')->nullable();
             $table->boolean('seen');
             $table->timestamps();
         });

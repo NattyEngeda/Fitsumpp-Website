@@ -1,19 +1,71 @@
 import React from 'react'
 import '../assets/styles/Order.css'
 
-import { TextInput, Select } from '@mantine/core'
-
+import { TextInput, Select, Textarea,Modal } from '@mantine/core'
+import axios from 'axios'
 import img1 from '../assets/images/Order/order.webp'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export default function Order() {
+  const [name, setName] = useState();
+  const [phone_number, setPhoneNumber] = useState();
+  const [email, setEmail] = useState();
+  const [product, setProduct] = useState();
+  const [desc, setDesc] = useState();
+
+  const data = {name, phone_number,email,product,desc};
+
+  const [success, setSuccess] = useState(false);
+  const [opened, setOpened] = useState(false);
+  console.log(opened)
+  const submit = () => {
+    console.log(data)
+    // fetch('http://localhost:5000/api/order',{
+    //   method: 'POST',
+    //   header:{
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify("Hello")
+    // }).then(function(response){
+    //   console.log(response)
+    //   return response.json();
+    // })
+    axios
+      .post('http://localhost:5000/api/order', data)
+      .then(response =>{
+        console.log(response);
+        if(response.status == 200){
+            setOpened(true);
+        }
+        
+      })
+      .catch(error=>{
+        console.log(error)
+      })
+
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
   })
 
   return (
+    <>
+    <Modal
+      centered
+       opened={opened}
+       onClose={() => setOpened(false)}
+        title="Success"
+      >
+        <div className='flex flex-col gap-5 '>
+          <p>Your Order has been successfully placed</p>
+          <button 
+          onClick={() => setOpened(false)}
+          className='px-4 py-2 bg-red-600 hover:bg-red-700 text-white hover:shadow-lg w-20 '>Closed</button>
+        </div>
+      </Modal>
+
     <div className='flex flex-col'>
 
       <div className="container1 w-full px-5 md:px-20 ">
@@ -30,24 +82,28 @@ export default function Order() {
             <div className='flex flex-col gap-5 md:pr-10'>
               <TextInput
                 placeholder='Your Name'
+                onChange={(e) => setName(e.target.value)}
                 label='Name'
                 size='md'
                 required
               />
               <TextInput
                 placeholder='09XXXXXXXX'
+                onChange={(e) => setPhoneNumber(e.target.value)}
                 label='Phone Number'
                 size='md'
                 required
               />
               <TextInput
                 placeholder='Your Email'
+                onChange={(e) => setEmail(e.target.value)}
                 label='Email'
                 size='md'
                 required
               />
               <Select
                 label="Pick Product"
+                onSelect={(e) => setProduct(e.target.value)}
                 placeholder="Pick your Product"
                 size='md'
                 data={[
@@ -65,7 +121,18 @@ export default function Order() {
                   { value: 'Other', label: 'Other' },
                 ]}
               />
-              <button className='px-4 py-3 bg-primary-500 shadow-md hover:bg-primary-600 hover:shadow-xl text-xl text-white'>Order</button>
+              <Textarea
+                placeholder='Description'
+                onChange={(e) => setDesc(e.target.value)}
+                label='Description'
+                size='md'
+                minRows={4}
+                
+              />
+
+              <button 
+              onClick={submit}
+              className='px-4 py-3 bg-primary-500 shadow-md hover:bg-primary-600 hover:shadow-xl text-xl text-white'>Order</button>
             </div>
             <div className="hidden md:flex overflow-hidden rounded-xl px-20">
               <img className='rounded-xl' src={img1} alt="Order Image" />
@@ -74,9 +141,8 @@ export default function Order() {
         </div>
 
       </div>
-
-
-
     </div>
+    </>
+
   )
 }

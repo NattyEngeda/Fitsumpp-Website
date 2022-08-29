@@ -20,4 +20,10 @@ class MainController extends Controller
 
         return view('layouts_admin.order', ['order' => $order]);
     }
+    public function orderAccept(){
+
+    }
+    public function orderDelete(){
+        
+    }
 }
