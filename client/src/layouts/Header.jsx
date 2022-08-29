@@ -141,8 +141,8 @@ export default function Header() {
       >
         {/* Mobile Pop Up Menu */}
         {/* {console.log(<Popover.Panel/>)} */}
-        <Disclosure>
-        <Disclosure.Panel focus id='menu' className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        {/* <Disclosure> */}
+        <Popover.Panel focus id='menu' className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             <div className='rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 bg-gray-50 divide-y-2 divide-gray-50 '>
                 <div className='pt-5 pb-6 px-5'>
                     <div className='flex items-center justify-between'>
@@ -169,19 +169,17 @@ export default function Header() {
                             //    <Disclosure.Button as={MyLink} href="/home">
                             //    Home
                             //  </Disclosure.Button>
-                               <Disclosure.Button
-                                    onClick={
-                                        Navigate('/order')
-                                    }
+                               <Popover.Button
                                     key={item.name}
                                     as='a'
+                                    onClick={close()}
                                     href={item.to}
                                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 border-b border-gray-50"
                                 >
                                     <item.icon className='flex-shrink-0 h-6 w-6 text-primary-500' aria-hidden="true" />
                                     <span className='ml-3 text-base font-medium text-primary-500'>{item.name}</span>
                                 <br className='border border-primary-400 text-primary-500 bg-primary-500' />
-                                </Disclosure.Button>
+                                </Popover.Button>
                             ))}
                         </nav>
                     </div>
@@ -194,8 +192,8 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </Disclosure.Panel>
-        </Disclosure>
+        </Popover.Panel>
+        {/* </Disclosure> */}
         </Transition>
    </Popover>
   )
