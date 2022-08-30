@@ -5,7 +5,7 @@
         {{-- Full Order  --}}
         <h1>Orders: {{ count($order)}}</h1>
         @foreach($order as $orders)
-        <div class="w-full border border-gray-200 rounded-lg bg-gray-100 h-auto py-10 shadow-xl">
+        <div class="w-full border border-gray-200 rounded-lg bg-gray-100 h-auto py-10 shadow-xl relative">
                 <div class="flex flex-col gap-4">
                     <div class="flex flex-row items-center justify-between px-3">
                         <h1 class="text-lg font-semibold ">{{$orders->name}}</h1>
@@ -19,15 +19,25 @@
                             <p>{{$orders->desc}}</p>
                         </div>
                         <div class="flex flex-row gap-4">
-                            <button class="px-3 py-2 bg-slate-600 text-lg text-white hover:bg-slate-700 hover:shadow-xl">Accept</button>
+                            <form method="POST" action="{{ route('acceptOrder', ['id' => $orders->id])}}">
+                                @csrf
+                                <button class="px-3 py-2 bg-slate-600 text-lg text-white hover:bg-slate-700 hover:shadow-xl">Accept</button>
+                                
+                            </form>
                             <form method="POST" action="{{ route('deleteOrder',['id' => $orders->id])}}" >
                                 @csrf  
-
                                 <button class="px-3 py-2 bg-red-600 text-lg text-white hover:bg-red-700 hover:shadow-xl">Decline</button>
                                 @method('DELETE')
                             </form>
                         </div>
                     </div>
+                </div>
+                <div class="absolute top-0 right-0">
+                    @if($orders->seen == true)
+                    <p class="px-2 py-2 bg-green-600 text-md text-white">Seen</p>
+                    @else
+                    <p class="px-2 py-2 bg-red-600 text-md text-white">New</p>
+                    @endif
                 </div>
         </div>
         @endforeach

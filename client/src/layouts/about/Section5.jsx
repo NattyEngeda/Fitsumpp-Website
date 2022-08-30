@@ -1,7 +1,7 @@
 import { CogIcon, UserGroupIcon } from '@heroicons/react/outline'
 import React from 'react'
 
-import roleImage from '../../assets/images/AboutPageIcons/role.jpg'
+import roleImage from '../../assets/images/AboutPageIcons/role.png'
 
 import staff from '../../assets/images/About Us/Icons/1Staff.png'
 import role from '../../assets/images/About Us/Icons/1Role.png'

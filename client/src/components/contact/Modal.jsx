@@ -2,10 +2,35 @@ import { Dialog, Transition } from '@headlessui/react'
 import { TextArea } from 'grommet'
 import { Fragment, useState } from 'react'
 import { Modal, Group, useMantineTheme, TextInput, Textarea } from '@mantine/core';
+import axios from 'axios';
 
 export default function Modale() {
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
+
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
+  const data = {name,email,message};
+
+  const submit = () => {
+    
+    console.log(data)
+    axios
+      .post('http://localhost:5000/api/message', data)
+      .then(response =>{
+        console.log(response);
+        if(response.status == 200){
+
+        }
+        
+      })
+      .catch(error=>{
+        console.log(error)
+      })
+
+  }
 
   return (
     <>
@@ -27,24 +52,30 @@ export default function Modale() {
         <div className='flex flex-col gap-5 '>
           <TextInput
             placeholder="Your name"
+            onChange={(e)=> setName(e.target.value)}
             label="Name"
             size='md'
             withAsterisk
           />
           <TextInput
             placeholder="Your email"
+            onChange={(e)=> setEmail(e.target.value)}
+
             label="Email"
             size='md'
             withAsterisk
           />
           <Textarea
             placeholder="Your Message"
+            onChange={(e)=> setMessage(e.target.value)}
             label="Message"
             size="md"
             minRows={5}
             withAsterisk
           />
-          <button className='px-5 py-3 bg-primary-500 text-lg text-white shadow-md hover:bg-primary-600 hover:shadow-xl'>Send</button>
+          <button 
+          onClick={submit}
+          className='px-5 py-3 bg-primary-500 text-lg text-white shadow-md hover:bg-primary-600 hover:shadow-xl'>Send</button>
         </div>
       </Modal>
 

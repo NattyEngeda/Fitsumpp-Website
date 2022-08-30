@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('desc');
+            $table->string('file_location');
             $table->string('size')->nullable();
             $table->bigInteger('width');
             $table->bigInteger('height');

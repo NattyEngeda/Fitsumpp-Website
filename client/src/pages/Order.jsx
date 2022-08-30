@@ -20,17 +20,8 @@ export default function Order() {
   const [opened, setOpened] = useState(false);
   console.log(opened)
   const submit = () => {
+    
     console.log(data)
-    // fetch('http://localhost:5000/api/order',{
-    //   method: 'POST',
-    //   header:{
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify("Hello")
-    // }).then(function(response){
-    //   console.log(response)
-    //   return response.json();
-    // })
     axios
       .post('http://localhost:5000/api/order', data)
       .then(response =>{

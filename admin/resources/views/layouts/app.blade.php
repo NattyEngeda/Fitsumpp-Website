@@ -13,8 +13,18 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+   
+    @production
+    @php
+     $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+    @endphp
+    <link rel="stylesheet" href="public/build/{{ $manifest['resources/sass/app.scss']['file'] }}">
+    <script src="public/build/{{$manifest['resources/js/app.js']['file']}}"></script>
+    @else
+    {{-- @vite --}}
+    @vite(['resources/sass/app.scss', '/js/app.js'])
     @vite('resources/css/app.css')
+    @endproduction
 
 </head>
 <body>

@@ -36,6 +36,26 @@ app.post("/api/order", (req,res) =>{
         console.log(req.body)
         
 })
+app.post("/api/message", (req,res) => {
+
+    const currentDate = new Date();
+    let data ={
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message,
+        seen: false,
+        created_at: currentDate,
+        updated_at: currentDate,
+    }
+
+    let sql = 'INSERT INTO feedback SET ?'
+    database.query(sql, data, function(err, result){
+        if(err) throw err;
+        console.log("Feedback Sent")
+    })
+    res.send('success');
+    console.log(req.body);
+})
 app.listen(port, () => {
     console.log("server started")
    

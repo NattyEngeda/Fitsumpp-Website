@@ -22,22 +22,22 @@ import useWorkTiles from '../../hooks/useWorkTiles';
 
   return (
     <div data-aos="slide-up" className='w-full relative bg-gray-200 flex-col px-5 py-5 sm:grid grid-cols-1 items-center'>
-        <div className='sm:hidden flex flex-row  justify-between'>
+        {/* <div className='sm:hidden flex flex-row  justify-between'>
             <ArrowNarrowLeftIcon className='w-10'/>
             <ArrowNarrowRightIcon className='w-10'/>
-        </div>
+        </div> */}
         <div className='hidden sm:inline'>
             {/* <FiArrowLeft 
             className='hover:text-primary-500 cursor-pointer  w-20 h-16'/> */}
         </div>
-        <div className='col-span-10 py-5 px-10'>
+        <div className='col-span-10 py-5 px-1 md:px-10'>
       
             <Swiper
                 navigation={true}
                 slidesPerView={tiles}
                 spaceBetween={30}
                 autoplay={{
-                    delay: 5000,
+                    delay: 7000,
                 }}
                 pagination={{
                 clickable: true,
@@ -57,6 +57,8 @@ import useWorkTiles from '../../hooks/useWorkTiles';
                         icon={item.icon}
                         name={item.name}
                         description={item.description}
+                        img1={item.img1}
+                        img2={item.img2}
                         />
                     </SwiperSlide>
                 ))

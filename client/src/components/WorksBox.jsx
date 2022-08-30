@@ -36,10 +36,10 @@ export default function WorksBox(props) {
             </div>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-5'>
                 <div className='h-52 bg-blue-500 w-full'>
-
+                    <img src={props.img1} alt="" />
                 </div>
                 <div className='h-52 bg-yellow-500 w-full'>
-
+                    <img src={props.img2} alt="" />
                 </div>
             </div>
             <div>
