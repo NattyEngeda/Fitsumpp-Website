@@ -12,13 +12,15 @@ export default function Section1Hero(props) {
                     
                 </div>
                 {/* Image Section */}
-                <div className="lg:max-w-2xl relative md:-pr-5 h-full lg:w-full md:w-1/2 w-full px-3 md:px-0 shadow-xl">
-                {/* <ProgressiveImage
-                // delay={001}
-                src={props.image}>
-                    {(src) => <img src={src} alt="an image" />}
-                </ProgressiveImage> */}
-                    <img className="object-cover object-center  w-full h-full" alt="hero" src={props.image}/>
+                <div className="lg:max-w-2xl relative md:pr-5 h-full lg:w-full md:w-1/2 w-full px-3 md:px-0 ">
+                
+                <div class="pattern-diagonal-lines-sm text-primary-400 md:-ml-16">
+                    <img 
+                    style={{
+                        transform: 'translate(30px, -30px)'
+                    }}
+                    className="object-cover object-center  w-full h-full" alt="hero" src={props.image}/>
+                </div>
                 </div>
             </div>
         </section>

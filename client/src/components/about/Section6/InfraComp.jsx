@@ -32,7 +32,7 @@ export default function InfraComp(props) {
         </div>
       </Modal>
 
-      <div className='flex flex-col md:absolute lg:right-32 w-full h-auto md:h-96 md:grid grid-cols-3 md:py-10 lg:py-0'>
+      <div className='flex flex-col md:absolute lg:right-32 w-full h-auto md:h-96 md:grid grid-cols-3 md:py-10 lg:py-0 border border-gray-200 bg-white shadow-xl'>
         {/* Image Section */}
         <div className='overflow-hidden'>
           <div className=' h-full w-full lg:w-[40vw] overflow-hidden border border-gray-100'>

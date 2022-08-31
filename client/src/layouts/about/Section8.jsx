@@ -26,7 +26,7 @@ export default function Section8() {
                 src={car1}
                 alt="Car Image 1" />
             </div>
-            <div className='bg-blue-400 flex justify-center items-center'>
+            <div className='bg-white flex justify-center items-center'>
             <img 
                 className='h-96'
                 src={car2}

@@ -6,6 +6,9 @@ import SectionOneSlider from '../../components/home/Section1/SectionOneSlider';
 
 // Import Data
 import works from '../../data/Works';
+// import 'https://unpkg.com/pattern.css'
+// import 'pattern.css'
+import '../../assets/styles/pattern.css'
 
 function checkName(id) {
 
@@ -25,9 +28,9 @@ function checkName(id) {
 export default function SectionOne() {
   let [nid, setNid] = useState(1);
   return (
-    <div>
+    <div className='relative'>
       <div className=' flex flex-col gap-8 absolute py-10 sm:py-20 pl-1 md:py-10 lg:py-20 md:pl-5 lg:pl-20 md:w-full w-full z-30'>
-        <div className='sm:hidden text-[40px] md:text-7xl  w-full  md:w-full mb-4 font-medium text-gray-900 flex flex-col gap-2 md:gap-5'>
+        <div className='sm:hidden text-[40px] md:text-7xl  w-full  md:w-full mb-4 font-medium font-sans text-gray-900 flex flex-col gap-2 md:gap-5'>
           <h1>Producing Different
           <br className='mb-5'/> Kind of <br className='block sm:hidden'/><span 
           style={{
@@ -50,6 +53,9 @@ export default function SectionOne() {
         <ImageCounter work={works} current={nid} />
       </div>
       <SectionOneSlider countt={setNid} />
+      <div className='w-52 h-52 absolute top-20 left-1 pattern-dots-md text-secondary-600'>
+
+      </div>
     </div>
   )
 }

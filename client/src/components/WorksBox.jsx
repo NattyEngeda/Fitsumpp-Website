@@ -4,7 +4,7 @@ import { Modal, Button, Group,useMantineTheme } from '@mantine/core';
 
 
 export default function WorksBox(props) {
-  const detail = `${props.description.substring(0, 250)}...`
+  const detail = `${props.description.substring(0, 260)}...`
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
   const Navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function WorksBox(props) {
 
   return (
     // Full Box
-    <div className='w-auto h-auto bg-white shadow-xl py-10 pb-28 flex flex-col items-center gap-8 px-5'>
+    <div className='w-auto h-[34rem] bg-white shadow-xl py-10 pb-28 flex flex-col items-center gap-8 px-5'>
       <Modal
         centered
         size="xl"
