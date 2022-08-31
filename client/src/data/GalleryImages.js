@@ -14,14 +14,14 @@ export default [
             img: img1,
             title: "Image 1",
             author: "Natnael Engeda",
-            rows: 1,
+            rows: 2,
             cols: 2,
         },
         {
             img: img5,
             title: "Image 2",
             author: "Natnael Engeda",
-            rows: 2,
+            rows: 3,
             cols: 1,
         }, 
         {
@@ -29,14 +29,14 @@ export default [
             title: "Image 3",
             author: "Natnael Engeda",
             rows: 1,
-            cols: 2,
+            cols: 1,
         }, 
         {
             img: img4,
             title: "Image 4",
             author: "Natnael Engeda",
             rows: 1,
-            cols: 2,
+            cols: 1,
         }, 
         {
             img: img2,
@@ -56,7 +56,7 @@ export default [
             img: img7,
             title: "Image 7",
             author: "Natnael Engeda",
-            rows: 2,
+            rows: 1,
             cols: 1,
         }, 
         {
@@ -77,7 +77,7 @@ export default [
             img: img10,
             title: "Image 10",
             author: "Natnael Engeda",
-            rows: 1,
+            rows: 2,
             cols: 1,
         }, 
             
