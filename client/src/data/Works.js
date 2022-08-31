@@ -18,5 +18,5 @@ export default [
     {id: 6, name: "3D Foam Cutout Branding", color: 'linear-gradient(to top, #d97706 70%, #0000 20%)', image: Foam3D2, cname: 'w-10 h-2 bg-[#d97706]', textStyle: "font-semibold px-2 pb-5 text-2xl md:text-4xl lg:text-7xl"},
     {id: 7, name: "Cake Toopers", color: 'linear-gradient(to top, #495938 70%, #0000 20%)', image: CakeToppers, cname: 'w-10 h-2 bg-[#495938]', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
     {id: 8, name: "Calendars", color: 'linear-gradient(to top, #9ca3af 70%, #0000 20%)', image: Calendar, cname: 'w-10 h-2 bg-gray-700', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
-    {id: 9, name: "Signage", color: 'linear-gradient(to top, #A2913F 70%, #0000 20%)', image: Signage, cname: 'w-10 h-2 bg-[#A2913F]', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
+    {id: 9, name: "Card Boards", color: 'linear-gradient(to top, #A2913F 70%, #0000 20%)', image: Signage, cname: 'w-10 h-2 bg-[#A2913F]', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
   ];

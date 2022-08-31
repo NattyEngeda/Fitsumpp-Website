@@ -8,7 +8,7 @@ export default function Section1() {
             <h1 className='text-3xl text-four-500'>Gallery</h1>
             <hr className='w-[5%] border-2 border-four-500 bg-four-500 rounded-full'/>
         </div>
-        <div className='px-1 md:px-10'>
+        <div className='px-1 md:px-5'>
           <MainGallery/>
         </div>
     </div>

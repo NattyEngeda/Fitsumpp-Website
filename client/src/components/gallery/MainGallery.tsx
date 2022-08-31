@@ -23,7 +23,7 @@ export default function TitlebarImageList() {
             width: "100%", 
             height: "100%" }}
         variant="quilted"
-        cols={3}
+        cols={4}
         rowHeight={300}
     >
      
