@@ -1,5 +1,7 @@
 import React from 'react'
 
+// import '../../assets/styles/pattern.css'
+
 export default function SectionSix() {
   return (
     <div className='relative  w-full min-h-screen flex flex-col items-center pt-5 gap-24 border-b border-gray-200'>
@@ -10,10 +12,10 @@ export default function SectionSix() {
         {/* Background Boxed */}
         <div className='absolute top-44 h-auto w-full z-10'>
             {/* Left Green Box */}
-            <div className='absolute w-[15%] h-96 bg-primary-600'>
+            <div className='absolute w-[15%] h-96 text-primary-600 pattern-dots-md'>
             </div>
             {/* Right Green Box */}
-            <div className='absolute right-0 top-24 w-[25%] h-96 bg-primary-600 float-right'>
+            <div className='absolute right-0 top-24 w-[25%] h-96 text-primary-600 float-right pattern-dots-md'>
             </div>
         </div>
         {/* Foreground Data */}

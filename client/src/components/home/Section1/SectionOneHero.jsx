@@ -14,7 +14,7 @@ export default function Section1Hero(props) {
                 {/* Image Section */}
                 <div className="lg:max-w-2xl relative md:pr-5 h-full lg:w-full md:w-1/2 w-full px-3 md:px-0 ">
                 
-                <div class="pattern-diagonal-lines-sm text-primary-400 md:-ml-16">
+                <div className="pattern-diagonal-lines-sm text-primary-400 md:-ml-16">
                     <img 
                     style={{
                         transform: 'translate(30px, -30px)'
