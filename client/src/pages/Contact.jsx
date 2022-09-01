@@ -3,7 +3,6 @@ import React, { useRef, useState, useEffect } from 'react'
 // Images
 import img1 from '../assets/images/Contact/Contact Us Random.webp'
 import img2 from '../assets/images/Contact/Office pic.jpg'
-
 // Components
 import Modal from '../components/contact/Modal'
 // Icons
@@ -142,7 +141,9 @@ export default function Contact() {
                 <div className='flex flex-col gap-5'>
                   <div className=' items-start md:items-end'>
                     <h1 className='text-lg inline font-semibold'>Driving: </h1>
-                    <p className=' inline font-light md:font-normal'>Refer to directions provided by <span className='text-primary-500 font-semibold'>Google Maps.</span></p>
+                    <p className=' inline font-light md:font-normal'>Refer to directions provided by 
+                      <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='text-primary-500 font-semibold'>Google Maps.</a>
+                    </p>
                   </div>
                   <div className=' gap-2 items-end'>
                     <h1 className='text-lg inline font-semibold'>Public Transportation: </h1>
@@ -166,11 +167,11 @@ export default function Contact() {
             <div className='h-80 w-full overflow-hidden py-5'>
               <img className=' w-auto' src={img2} alt="Place Holder" />
             </div>
-            <div className=' w-full px-5 md:px-20 py-5 flex flex-col gap-5'>
+            <div className=' w-full px-  md:px-20 py-5 flex flex-col gap-5'>
               <h1 className='text-2xl font-semibold'>Addis Ababa, Ethiopia (Main Office)</h1>
               <div className='flex flex-col items-start gap-2'>
                 <h1 className='text-2xl font-semibold'>Address</h1>
-                <div className='flex flex-col gap-1 text- font-light'>
+                <div className='flex flex-col gap-1  font-light'>
                   <p>Meseret Building</p>
                   <p>Kenenisa Ave</p>
                   <p>Addis Ababa, Ethiopia</p>

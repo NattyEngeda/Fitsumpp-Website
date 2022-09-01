@@ -46,7 +46,6 @@ import logo11 from '../assets/images/Compnays/11.png'
 import logo12 from '../assets/images/Compnays/12.jpg'
 import logo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
 import CardsSection8 from '../components/home/CardsSection8';
-import Test from '../pages/Test';
 
 // Icons
 import location from '../assets/images/About Us/Icons/1location.png'

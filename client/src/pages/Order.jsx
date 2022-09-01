@@ -34,13 +34,10 @@ export default function Order() {
       .catch(error=>{
         console.log(error)
       })
-
   }
-
   useEffect(() => {
     window.scrollTo(0, 0);
   })
-
   return (
     <>
     <Modal
@@ -57,8 +54,7 @@ export default function Order() {
         </div>
       </Modal>
 
-    <div className='flex flex-col'>
-
+    <div className='flex flex-col'> 
       <div className="container1 w-full px-5 md:px-20 ">
         <div className="shape-blob"></div>
         <div className="shape-blob one"></div>
@@ -118,9 +114,7 @@ export default function Order() {
                 label='Description'
                 size='md'
                 minRows={4}
-                
               />
-
               <button 
               onClick={submit}
               className='px-4 py-3 bg-primary-500 shadow-md hover:bg-primary-600 hover:shadow-xl text-xl text-white'>Order</button>

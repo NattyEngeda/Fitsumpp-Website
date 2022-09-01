@@ -2,7 +2,6 @@ import React from 'react'
 // Images
 import product from '../assets/images/ProductPageIcons/product.png'
 import ProductCard from '../components/Product/ProductCard';
-
 // Data
 const products = [
                     {id: 1, name: "Bussiness Cards"},
