@@ -1,10 +1,12 @@
 import React from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { useInView } from 'react-intersection-observer';
 import { Link, useNavigate } from 'react-router-dom';
-import { Navigation,Autoplay } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRightIcon } from '@heroicons/react/outline';
-
+import ScrollTrigger from 'react-scroll-trigger';
+import { useTransition, animated } from 'react-spring';
 
 // Aos Library
 import aos from 'aos';
@@ -16,6 +18,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import 'animate.css';
 // Data
 import works from '../data/Works';
 import Role from '../data/Role';
@@ -32,27 +35,34 @@ import CompanyCards from '../components/CompanyCards'
 import image from '../assets/images/Horizontal Image/Horizontal Image.png'
 
 // Company Worked For Images
-import logo1 from '../assets/images/Compnays/1.png'
-import logo2 from '../assets/images/Compnays/2n.jpg'
+import logo1 from '../assets/images/Compnays/1.jpg'
+import logo2 from '../assets/images/Compnays/2.jpg'
 import logo3 from '../assets/images/Compnays/3.jpg'
-import logo4 from '../assets/images/Compnays/4.png'
-import logo5 from '../assets/images/Compnays/5.png'
-import logo6 from '../assets/images/Compnays/6n.jpg'
+import logo4 from '../assets/images/Compnays/4.jpg'
+import logo5 from '../assets/images/Compnays/5.jpg'
+import logo6 from '../assets/images/Compnays/6.jpg'
 import logo7 from '../assets/images/Compnays/7.png'
-import logo8 from '../assets/images/Compnays/8 n.jpg'
-import logo9 from '../assets/images/Compnays/9.png'
+import logo8 from '../assets/images/Compnays/8.png'
+import logo9 from '../assets/images/Compnays/9.jpg'
 import logo10 from '../assets/images/Compnays/10.png'
-import logo11 from '../assets/images/Compnays/11.png'
 import logo12 from '../assets/images/Compnays/12.jpg'
+import logo13 from '../assets/images/Compnays/13.jpg'
+import logo14 from '../assets/images/Compnays/14.webp'
+import logo15 from '../assets/images/Compnays/15.jpg'
+
+
+
 import logo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
+import flogo from '../assets/images/logo/F Only Colored Logo.png'
 import CardsSection8 from '../components/home/CardsSection8';
 
 // Icons
 import location from '../assets/images/About Us/Icons/1location.png'
-import { 
-  ClockIcon, 
+import {
+  ClockIcon,
   LocationMarkerIcon,
-  PhoneIcon } from '@heroicons/react/outline'
+  PhoneIcon
+} from '@heroicons/react/outline'
 
 
 // Functions
@@ -60,12 +70,15 @@ function checkName(id) {
   let name = '';
   let color = '';
   let style = '';
-  
+  let color2 = '';
+
   name = works[id - 1]['name'];
   color = works[id - 1]['color'];
   style = works[id - 1]['textStyle'];
+  color2 = works[id - 1]['color2'];
 
-  let currentArr = [name,color,style];
+
+  let currentArr = [name, color, style, color2];
   return currentArr;
 }
 
@@ -77,9 +90,12 @@ export default function Home() {
 
   let [nid, setNid] = useState(1);
 
-  const myRef = useRef(null)
-
   const executeScroll = () => myRef.current.scrollIntoView()
+
+  const [companyIn, setCompanyIn] = useState(true);
+  const transition = useTransition(companyIn, {
+
+  });
 
 
   // Functions
@@ -94,12 +110,15 @@ export default function Home() {
     executeScroll
     aos.init({ duration: 1000 })
   }, []);
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  })
 
   return (
     // Whole Home Body
-    <div className='bg-gray-50 flex flex-col overflow-hidden'>
+    <div className='bg-white flex flex-col overflow-hidden'>
       {/* Section */}
-      <section className='min-h-screen'>
+      <section className='min-h-screen animate__animated animate__backInDown'>
         <div className='relative'>
           <div className=' flex flex-col gap-8 absolute py-10 sm:py-20 pl-1 md:py-10 lg:py-20 md:pl-5 lg:pl-20 md:w-full w-full z-30'>
             <div className='sm:hidden text-[40px] md:text-7xl  w-full  md:w-full mb-4 font-medium font-sans text-gray-900 flex flex-col gap-2 md:gap-5'>
@@ -124,7 +143,7 @@ export default function Home() {
 
             <ImageCounter work={works} current={nid} />
           </div>
-          <SectionOneSlider countt={setNid} />
+          <SectionOneSlider countt={setNid} color={checkName(nid)[3]} />
           <div className='w-52 h-52 absolute top-20 left-1 pattern-dots-md text-secondary-600'>
           </div>
         </div>
@@ -134,10 +153,10 @@ export default function Home() {
       <section>
         <div className='w-full relative bg-white sm:px-10 py-10'>
           <section className='w-full h-auto flex flex-col md:flex-row'>
-            <div className='w-full h-auto md:py-10 px-5 md:pl-0 lg:pl-0'>
+            <div data-aos="fade-right" className='w-full h-auto md:py-10 px-5 md:pl-0 lg:pl-0'>
               <h1 className='text-4xl md:text-5xl 2xl:text-6xl font-light tracking-wide'>A <span className='font-semibold text-primary-500'>full-service printing experience</span> build on top of experience and professionalism. </h1>
             </div>
-            <div className='flex flex-col gap-1 items-start w-full h-auto py-10 text-lg xl:text-xl 2xl:text-xl space-y-10 px-5 2xl:pl-20 md:px-0'>
+            <div data-aos="fade-left" className='flex flex-col gap-1 items-start w-full h-auto py-10 text-lg xl:text-xl 2xl:text-xl space-y-10 px-5 2xl:pl-20 md:px-0'>
               <p>Our strong reputation is built on the successful delivery of all assignments, no matter how challenging the brief or how tight the timeframe. From business cards to corporate brochures, we collaborate with the customer to understand their requirements fully and to provide the optimal results using the highest specifications appropriate for their budget.We pride ourselves on professionalism, loyalty and a commitment to upholding the needs of our clients. We Pride ourselves on professionalism, loyality and a commitment to upholding the needs of our clients</p>
               {/* <p></p> */}
               <button onClick={changePage} className='px-3 py-4 bg-primary-500 hover:bg-primary-700 text-white shadow-lg hover:shadow-xl '>More About Us </button>
@@ -145,9 +164,9 @@ export default function Home() {
           </section>
         </div>
       </section>
-      
+
       {/* Section */}
-      <section>
+      <section data-aos="slide-up">
         <div className='w-full relative bg-gray-200 flex-col px-5 py-20 sm:grid grid-cols-1 items-center'>
           <div className='col-span-10 py-5 px-1 md:px-10'>
             <Swiper
@@ -185,9 +204,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Section */}
-      <section>
+      <section data-aos="zoom-in">
         <div className='w-full min-h-screen py-10 px-5'>
           {/* Behind the Scene Box */}
           <div className='absolute w-[50%] md:w-[30%] h-80 bg-gray-300 mt-56'>
@@ -212,40 +231,62 @@ export default function Home() {
       </section>
 
       {/* Section */}
-      <section>
-        <div className='w-full relative h-auto  bg-[#E4F8F2] flex flex-col items-center gap-5 py-5'>
+      <section
+        data-aos='zoom-in'
+        className='relative'>
+        <div className='absolute h-[20rem] w-[28rem] top-0 right-0 pattern-dots-md text-primary-500'>
+
+        </div>
+        <div className='absolute h-[20rem] w-[28rem] bottom-0 left-0 pattern-dots-md text-primary-500'>
+
+        </div>
+        <div className='w-full relative h-auto  flex flex-col items-center gap-16 py-5'>
           <div className='flex flex-col gap-2 lg:gap-5'>
             <h1 className='text-3xl lg:text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
             <hr className='border-2 border-primary-500 bg-primary-500 w-1/4 m-auto rounded-full' />
           </div>
           {/* Company List For PC*/}
-          <div className='hidden w-96 lg:w-full h-auto  lg:grid grid-cols-1 lg:grid-cols-7 gap-10'>
-            <CompanyCardHolder />
-            <div className='w-full h-full hidden lg:flex flex-col md:py-56'>
-              <CompanyCards image={logo8} />
-            </div>
-            <div className='w-full h-full  flex flex-col gap-12 lg:py-36'>
-              <CompanyCards image={logo4} />
-              <CompanyCards image={logo5} />
-            </div>
+          <ScrollTrigger onEnter={() => {
+            console.log("Enterrd")
+            console.log(companyIn)
+            setCompanyIn(true)
+          }}>
+            <div className='hidden w-full h-auto  lg:grid grid-cols-1 lg:grid-cols-8 gap-5 min-h-screen px-5'>
+              <div className=' w-full flex flex-col justify-center gap-5 pb-10'>
+                <CompanyCards image={logo4} />
+                <CompanyCards image={logo1} />
+              </div>
+              <div className=' w-full flex flex-col gap-5 justify-center'>
+                <CompanyCards image={logo5} />
+                <CompanyCards image={logo6} />
+                <CompanyCards image={logo7} />
+              </div>
+              <div className=' w-full flex flex-col justify-center gap-5'>
+                <CompanyCards image={logo3} />
+                <CompanyCards image={logo14} />
+              </div>
+              <div className=' w-full col-span-2 flex flex-col justify-center pb-44'>
+                {companyIn && <CompanyCards image={flogo} pad={'64px'} />}
+                {transition((style, item) => {
+                  item ? <animated.div style={style}><CompanyCards image={flogo} pad={'64px'} /></animated.div> : ''
+                })}
 
-            <div className='w-full h-full  flex flex-col gap-12 lg:py-12'>
-              <CompanyCards image={logo1} />
-              <CompanyCards image={logo2} />
-              <CompanyCards image={logo3} />
+              </div>
+              <div className=' w-full flex flex-col items-center justify-center gap-5'>
+                <CompanyCards image={logo15} />
+                <CompanyCards image={logo2} />
+              </div>
+              <div className=' w-full flex flex-col gap-5 justify-center'>
+                <CompanyCards image={logo8} />
+                <CompanyCards image={logo9} />
+                <CompanyCards image={logo10} />
+              </div>
+              <div className=' w-full flex flex-col justify-center gap-5 pb-10'>
+                <CompanyCards image={logo12} />
+                <CompanyCards image={logo13} />
+              </div>
             </div>
-
-            <div className='w-full h-full  flex flex-col gap-12 lg:py-36'>
-              <CompanyCards image={logo6} />
-              <CompanyCards image={logo7} />
-            </div>
-
-            <div className='w-full h-full hidden lg:flex flex-col md:py-56'>
-              <CompanyCards image={logo10} />
-            </div>
-            <CompanyCardHolder />
-          </div>
-
+          </ScrollTrigger>
           {/* Company List for Phone */}
           <div className='lg:hidden w-full px-5 lg:w-full h-auto flex flex-col items-center gap-2'>
 
@@ -275,14 +316,17 @@ export default function Home() {
       </section>
 
       {/* Section */}
-      <section className="text-gray-600 body-font">
+      <section
+        data-aos='zoom-out-up'
+        data-aos-delay='200'
+        className="text-gray-600 body-font">
         <div className="container grid sm:grid-cols-2  py-5 mx-auto">
           {/* Left Part */}
           <div className="flex flex-col  w-full mb-20 sm:mb-0 pt-10 ">
             <img className='w-full' src={logo} alt="Fitsum Advert Logo" />
           </div>
           {/* Roght Part */}
-          <div className="grid sm:grid-cols-2 text-center">
+          <div className="grid sm:grid-cols-2 gap-5 text-center">
             {
               Section8Data.map((items) => (
                 <CardsSection8
@@ -291,7 +335,7 @@ export default function Home() {
                   name={items.name}
                   desc={items.desc}
                   num={items.num}
-                  time={items.time}
+                  duration={items.duration}
                 />
               ))
             }
@@ -300,7 +344,7 @@ export default function Home() {
       </section>
 
       {/* Section */}
-      <section  className="text-gray-600 body-font relative">
+      <section className="text-gray-600 body-font relative">
         <div className='min-h-screen px-5 md:px-5 lg:px-20 py-5 lg:py-10 flex flex-col gap-10'>
           <div className='flex flex-col gap-5'>
             {/* <LocationMarkerIcon className='w-32 text-primary-500'/> */}

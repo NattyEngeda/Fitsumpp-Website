@@ -37,7 +37,7 @@ export default function SectionOneSlider(props) {
         <SwiperSlide
         key={item.id}
         > 
-          <Section1Hero image={item.image}/>
+          <Section1Hero image={item.image} color={props.color}/>
         </SwiperSlide>
         ))
       }

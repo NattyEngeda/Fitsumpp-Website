@@ -91,11 +91,11 @@ export default function Header() {
   return (
     // Whole Menu
     
-   <Popover className={classNames(scrollPosition > 0 ? 'shadow-lg bg-white' : 'shadow-none', 'transition sticky top-0 w-full z-40 font-Sora backdrop-filter backdrop-blur-lg bg-opacity-30')}>
+   <Popover className={classNames(scrollPosition > 0 ? 'shadow-lg py-0' : 'shadow-none', 'transition-all sticky top-0 w-full z-40 font-Sora backdrop-filter backdrop-blur-lg bg-opacity-30')}>
     <div className='max-w-7xl mx-auto px-4 sm:px-6'>
-        <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x-2'>
+        <div className='flex justify-between items-center border-b-2 border-gray-100 py-3 lg:py-1 md:justify-start md:space-x-10 lg:divide-x-2 '>
             {/* Fitsum Advert Logo */}
-            <div className='flex  justify-start  lg:w-auto lg:flex-none'>
+            <div className='flex  justify-start  lg:w-auto lg:flex-none '>
                 <Link to="/">
                     <span className='sr-only'>Fitsum Advert</span>
                     <img 

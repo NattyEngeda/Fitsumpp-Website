@@ -16,22 +16,29 @@ import {
 } from 'react-accessible-accordion';
 // Styles
 import 'react-accessible-accordion/dist/fancy-example.css';
+import 'animate.css';
+// Aos Library
+import aos from 'aos';
+import "aos/dist/aos.css"
 
 export default function Contact() {
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  })
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    // executeScroll
+    aos.init({ duration: 1000 })
+  }, []);
   return (
-    <div className='w-full'>
+    <div className='w-full overflow-x-hidden overflow-y-hidden'>
       {/* Section */}
       <section>
         <div className='relative md:min-h-screen h-[50rem]'>
-          <div className='w-full relative h-96 bg-orange-800 flex flex-row z-10 border gray-200'>
-            <div className='bg-gray-50 w-full flex flex-col md:justify-center items-start gap-6 px-5 md:px-20 py-20'>
+          <div className='w-full relative h-96 flex flex-row z-10 border gray-200'>
+            <div className='bg-gray-100 w-full flex flex-col md:justify-center items-start gap-6 px-5 md:px-20 py-20 animate__animated animate__fadeInLeft'>
               <h1 className='text-3xl md:text-6xl font-semibold'>Contact Us</h1>
               <p className='text-base md:text-xl'>Get in touch with us through text, call <br className='md:hidden' /> or sending us a message</p>
             </div>
-            <div className='hidden  bg-yellow-600 w-full md:flex justify-center items-center'>
+            <div className='hidden w-full md:flex justify-center items-center animate__animated animate__fadeInRight  animate__delay-1s'>
               <img
                 src={img1}
                 alt="Contact Us" />
@@ -39,7 +46,7 @@ export default function Contact() {
           </div>
           <div className='absolute top-80 h-auto w-full z-10 flex flex-col md:flex-row justify-evenly gap-5 md:gap-0 px-5'>
             {/* Box One Call Us */}
-            <div className='relative w-full md:w-1/3 h-auto flex flex-col gap-5 items-center px-10 py-10 bg-gray-50 shadow-2xl border border-gray-200'>
+            <div className='relative w-full md:w-1/3 h-auto flex flex-col gap-5 items-center px-10 py-10 bg-gray-50 shadow-2xl border border-gray-200 animate__animated animate__fadeInUp'>
               <div className='w-full flex flex-col gap-1 items-center text-gray-600'>
                 <PhoneIcon className='w-20' />
                 <h1 className='text-xl'>Talk to Customer Service</h1>
@@ -54,7 +61,7 @@ export default function Contact() {
               </div>
             </div>
             {/* Box Two */}
-            <div className='relative w-full md:w-1/3 h-auto flex flex-col gap-5 items-center px-10 py-10 bg-gray-50 shadow-2xl border border-gray-200'>
+            <div className='relative w-full md:w-1/3 h-auto flex flex-col gap-5 items-center px-10 py-10 bg-gray-50 shadow-2xl border border-gray-200  animate__animated animate__fadeInUp animate__delay-1.5s'>
               <div className='w-full flex flex-col gap-1 items-center text-gray-600'>
                 <MailIcon className='w-20' />
                 <h1 className='text-xl'>Send Us an E-mail</h1>
@@ -72,7 +79,10 @@ export default function Contact() {
       </section>
 
       {/* Section */}
-      <section>
+      <section
+      data-aos='fade-up'
+      data-aos-delay='200'
+      >
         <div className='relative w-full h-auto flex flex-col items-center bg-white pt-80 md:py-10 gap-10 border border-gray-200 '>
           <div className='flex flex-col justify-center items-center gap-5'>
             <h1 className='text-2xl md:text-5xl text-gray-800 text-center font-semibold'>Connect with Our Physical Office</h1>
@@ -115,7 +125,7 @@ export default function Contact() {
       </section>
 
       {/* Section */}
-      <section>
+      <section data-aos='fade-up'>
         <div id='office' className='w-full h-auto bg-white px-5 md:px-32 py-10'>
           <Accordion
             className='bg-white'
@@ -161,7 +171,10 @@ export default function Contact() {
       </section>
 
       {/* Section */}
-      <section>
+      <section 
+      data-aos='fade-up'
+      data-aos-delay='150'
+      >
         <div className='w-full relative h-auto px-5 md:px-20 py-10 md:py-5 bg-gray-100'>
           <div className='h-auto flex flex-col md:flex-row '>
             <div className='h-80 w-full overflow-hidden py-5'>

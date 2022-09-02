@@ -3,6 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper";
 import { ImageOverlay } from 'react-image-overlay-effect'
 
+// Aos Library
+import aos from 'aos';
+import "aos/dist/aos.css"
+
 // Images
 import fullLogo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
 import img1 from '../assets/images/About Us/Section 2.webp'
@@ -19,6 +23,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import 'animate.css';
+
 // Icons
 import infra from '../assets/images/About Us/Icons/1infrastructure.png';
 import InfraComp from '../components/about/Section6/InfraComp';
@@ -31,8 +37,13 @@ import InData from '../data/InfrastructureData';
 import MachineNames from '../data/MachineNames';
 
 export default function About() {
+  
+  const executeScroll = () => myRef.current.scrollIntoView()
+
   useEffect(() => {
     window.scrollTo(0, 0)
+    executeScroll
+    aos.init({ duration: 1000 })
   }, []);
   // Window Height calculation
   let windowHeight = window.innerHeight;
@@ -42,9 +53,9 @@ export default function About() {
   const [isActive, setIsActive] = useState(false);
   const [mActive, setMActive] = useState("MInfa-1");
   return (
-    <div className='relative min-h-screen flex flex-col'>
+    <div className='relative min-h-screen flex flex-col overflow-x-hidden overflow-y-hidden'>
       {/* Section */}
-      <section>
+      <section className='animate__animated animate__backInDown'>
         <div className='flex flex-col gap-10'>
           <div className='flex justify-center'>
             <img
@@ -57,7 +68,7 @@ export default function About() {
       </section>
 
       {/* Section */}
-      <section>
+      <section className='animate__animated animate__slideInUp'>
         <div className='min-h-screen md:min-h-fit px-5 md:px-32 space-y-5 py-6 md:py-5'>
           <div className='flex flex-col gap-5 text-lg md:text-xl'>
             <p><span className='text-primary-500 font-semibold'>Fitsum Printing & Advertising P.l.C</span> is a printing & Advertisng company established on 2010 in the heart of Addis
@@ -82,7 +93,7 @@ export default function About() {
       {/* Section */}
       <section>
         <div className='w-full min-h-screen h-full md:h-auto relative md:block flex flex-col '>
-          <div className='relative md:absolute md:top-20 md:left-10 w-full md:w-2/3 h-auto bg-secondary-300 z-10 py-10 px-5 md:pt-96 lg:pt-0 md:px-10 lg:pr-80 space-y-10 order-2'>
+          <div data-aot="fade-right" className='relative md:absolute md:top-20 md:left-10 w-full md:w-2/3 h-auto bg-secondary-300 z-10 py-10 px-5 md:pt-96 lg:pt-0 md:px-10 lg:pr-80 space-y-10 order-2'>
             <h1 className='text-4xl md:text-5xl font-semibold md:mt-20 lt:mt-0'>We succeed when you succeed.</h1>
             <p className='text-lg md:text-xl'>At Fitsum Advert, we approach every project with your success in mind, and we know that looks different for every client. We’ll discuss what has (and hasn’t) worked for you in the past and work together to decide what steps to take next. As your needs evolve, our varied capabilities and expertise allow us to accommodate your requests and help your business succeed.</p>
             <h1 className='text-3xl md:text-5xl font-semibold'>HELPING YOU ACHIEVE YOUR GOALS</h1>
@@ -98,6 +109,7 @@ export default function About() {
               high quality printing services.</p>
           </div>
           <div
+            data-aos="fade-left"
             className='relative md:absolute md:top-3 md:right-10 w-full md:w-3/4 lg:w-2/4 bg-purple-500 z-20 order-1 overflow-hidden border border-gray-200 shadow-2xl'
             style={{
               height: windowHeight / 2 + windowHeight / 4,
@@ -115,7 +127,10 @@ export default function About() {
       <section>
         <div className='min-h-screen white grid grid-col-1 md:grid-cols-2 md:pt-[45rem] lg:pt-[40rem] xl:pt-64'>
           <div className='flex flex-col'>
-            <div className='h-auto w-full  flex flex-col items-start py-8  px-5 md:px-20 gap-5'>
+            <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className='h-auto w-full  flex flex-col items-start py-8  px-5 md:px-20 gap-5'>
               <img
                 src={mission}
                 alt="Our Mission"
@@ -126,7 +141,10 @@ export default function About() {
                 by pursuing business through innovation & creativity that exceeds the
                 expectation of our esteemed customers.</p>
             </div>
-            <div className='h-auto w-full  flex flex-col items-start py-8 px-5 md:px-20 gap-5'>
+            <div 
+            data-aos="fade-up"
+            data-aos-delay="500"
+            className='h-auto w-full  flex flex-col items-start py-8 px-5 md:px-20 gap-5'>
               <img
                 src={vission}
                 alt="Our Mission"
@@ -138,7 +156,9 @@ export default function About() {
                 service, relationship & profitability.</p>
             </div>
           </div>
-          <div className='lg:min-h-screen h-auto w-full  flex flex-col items-start py-8  px-5 md:px-20 gap-5'>
+          <div 
+          data-aos="fade-up"
+          className='lg:min-h-screen h-auto w-full  flex flex-col items-start py-8  px-5 md:px-20 gap-5'>
             <img
               src={values}
               alt="Our Values"
@@ -163,7 +183,10 @@ export default function About() {
       </section>
 
       {/* Section */}
-      <section>
+      <section 
+      data-aos='fade-up'
+      data-aos-delay='300'
+      >
         <div className='w-full relative min-h-screen px-5 md:px-20'>
           <div className='flex flex-col gap-5'>
             {/* <UserGroupIcon className='w-20 md:w-32 text-primary-500'/> */}
@@ -214,7 +237,9 @@ export default function About() {
           </div>
           {/* For Desktop View */}
           <div className='hidden relative w-full h-[30rem] lg:grid grid-cols-5 '>
-            <div className='bg-three-400 col-span-2 shadow-xl'>
+            <div 
+            data-aos='fade-right'
+            className='bg-three-400 col-span-2 shadow-xl'>
               <ul className='h-full flex flex-col items-start justify-evenly py-5 px-10 text-2xl'>
 
                 <li className=' hover:ml-10 active:ml-10 transition-all duration-100'>
@@ -265,7 +290,10 @@ export default function About() {
               </ul>
             </div>
 
-            <div className='relative white col-span-3 flex items-center'>
+            <div
+            data-aos='fade-left'
+            data-aos-delay='200'
+            className='relative white col-span-3 flex items-center'>
               {active === 'Infa-1' && <InfraComp image={InData[0]['image']} title={InData[0]['title']} detail={InData[0]['detail']} />}
               {active === 'Infa-2' && <InfraComp image={InData[1]['image']} title={InData[1]['title']} detail={InData[1]['detail']} />}
               {active === 'Infa-3' && <InfraComp image={InData[2]['image']} title={InData[2]['title']} detail={InData[2]['detail']} />}
@@ -326,7 +354,10 @@ export default function About() {
       </section>
 
       {/* Section */}
-      <section>
+      <section 
+      data-aos='fade-up'
+      data-aos-delay='200'
+      >
         <div className='w-full flex flex-col min-h-screen  py-5 sm:px-5 md:px-20'>
           <div className='flex flex-col gap-10'>
             <div className='px-5 sm:px-0'>
@@ -404,15 +435,19 @@ export default function About() {
               <hr className='border-2 border-primary-500 bg-primary-500 rounded-full w-1/5' />
             </div>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 h-auto gap-1 bg-black'>
+          <div className='grid grid-cols-1 md:grid-cols-2 h-auto gap-1 bg-white'>
             <div className='bg-white'>
               <img
+               data-aos='fade-right'
+               data-aos-delay='300'
                 className='w-full'
                 src={car1}
                 alt="Car Image 1" />
             </div>
             <div className='bg-white flex justify-center items-center'>
               <img
+               data-aos='fade-left'
+               data-aos-delay='200'
                 className='h-96'
                 src={car2}
                 alt="Car Image 2" />
@@ -422,7 +457,10 @@ export default function About() {
       </section>
 
       {/* Section */}
-      <section>
+      <section
+      data-aos='fade-up'
+      data-aos-delay='200'
+      >
         <div className='relative w-full min-h-screen bg-gray-100 pb-10'>
           <div className='py-5 md:py-10 px-5 md:px-20 flex flex-col gap-5'>
             <img
