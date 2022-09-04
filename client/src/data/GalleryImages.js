@@ -45,13 +45,13 @@ import img44 from '../assets/images/Gallery/44.webp'
 
 
 export default [
-        { img: img1, title: "Zola Printing", author: "Foam Cutout for Zola Printing", rows: 1, cols: 2 },
+        { img: img1, title: "Zola Printing", author: "3D LighBox for Zola Printing", rows: 1, cols: 2 },
         { img: img2, title: "School of Tomorrow", author: "Binder for School of Tomorrow", rows: 3, cols: 2 }, 
         { img: img3, title: "Cake Topper", author: "Cake Topper", rows: 1, cols: 1 }, 
         { img: img4, title: "Fitsum Printing and Advert Calander", author: "Calander", rows: 1, cols: 1 }, 
         { img: img5, title: "P6 LED", author: "High quality L6 LED display system boards", rows: 2, cols: 1 }, 
         { img: img6, title: "Cake Topper", author: "Cake Topper", rows: 2, cols: 1 }, 
-        { img: img7, title: "Marriage Certificate", author: "?", rows: 2, cols: 2 }, 
+        { img: img7, title: "Invitaion Cards", author: "Invitation Cards", rows: 2, cols: 2 }, 
         { img: img9, title: "Dallol Aluminium", author: "?", rows: 1, cols: 1 }, 
         { img: img13, title: "Cake Topper", author: "H & M Cake Topper", rows: 1, cols: 1 }, 
         { img: img8,  title: "Button Pin", author: "Button Pins for Dot, Ethio Police University", rows: 2, cols: 2 }, 
@@ -70,24 +70,22 @@ export default [
         { img: img19, title: "Ethiopian Police University", author: "Shopping Bangs for EPU 75th Aniversary Celebration", rows: 3, cols: 2 }, 
         { img: img16, title: "Parliamnet", author: "3D foam cutout branding for parliament", rows: 2, cols: 2 }, 
         { img: img25, title: "Stamp", author: "Custom Wooden, Rubber Stamp", rows: 1, cols: 2 }, 
-        { img: img26, title: "Addis International Bank", author: "?", rows: 1, cols: 2 }, 
+        { img: img26, title: "Addis International Bank", author: "Foa Design", rows: 1, cols: 2 }, 
         { img: img36, title: "Books", author: "Yihim Yalfal Book by Mihretab Asfa", rows: 3, cols: 2 }, 
-        { img: img27, title: "Colors Restaurant & Lounge", author: "?", rows: 1, cols: 2 }, 
+        { img: img27, title: "Colors Restaurant & Lounge", author: "3D light box", rows: 1, cols: 2 }, 
         { img: img28, title: "Drawing Book", author: "Custom Drawing Books for Kids", rows: 2, cols: 2 }, 
-        { img: img35, title: "Golder Color Boards", author: "Color Boards", rows: 1, cols: 2 }, 
-        { img: img32, title: "Ethiopian Civil Service University Research Resource Center", author: "?", rows: 1, cols: 2 }, 
+        { img: img35, title: "Door Signs", author: "Door Signs", rows: 1, cols: 2 }, 
+        { img: img32, title: "Ethiopian Civil Service University Research Resource Center", author: "Building Signs", rows: 1, cols: 2 }, 
         { img: img34, title: "Right Driving License School", author: "Viechle Graphics", rows: 1, cols: 2 }, 
         { img: img44, title: "Tie ", author: "Tie Photo Engravement for Ministry of Revenues", rows: 2, cols: 1 }, 
-        { img: img29, title: "Color Printed Books", author: "Color Printed Books for Addis Ababa City Adminstration...", rows: 2, cols: 3 }, 
+        { img: img29, title: "Digital Printed Books", author: "Digital Printed Books for Addis Ababa City Adminstration...", rows: 2, cols: 3 }, 
         { img: img31, title: "Mugs", author: "Cutsom Designed Mugs", rows: 2, cols: 3 },
-        { img: img33, title: "Image 33", author: "??", rows: 1, cols: 1 }, 
+        { img: img33, title: "World Vision", author: "Booklet for World Vision", rows: 1, cols: 1 }, 
         { img: img40, title: "CBE", author: "Business Card for Orthodox Tewahido CBE Branch Manager", rows: 1, cols: 1 }, 
         { img: img41, title: "Custom Books", author: "Cutsom Books for Different Purposes", rows: 2, cols: 2 }, 
         { img: img37, title: "Pens / Pens with Sprays", author: "Custom Pens with sprays for .Dot, UkAID ...", rows: 2, cols: 2 }, 
         { img: img38, title: "Agenda", author: "Agenda for CBE, Ministry of Agriculture, Addis International Bank ...", rows: 2, cols: 3 }, 
-
         { img: img43, title: "Scarfs", author: "Scarfs for Addis Ababa Management Institute, .DOT ...", rows: 1, cols: 1 }, 
-
         { img: img42, title: "Bag", author: "Image Engraved Bags", rows: 1, cols: 1 }, 
 
 

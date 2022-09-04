@@ -15,5 +15,5 @@ export default [
     {id: 5, name: "Digital Solvent Printer", link:'mach-5',image: machine5},
     {id: 6, name: "CNC", link:'mach-6',image: machine6},
     {id: 7, name: "Laser Cutter", link:'mach-7',image: machine7},
-    {id: 8, name: "hp Digital Printer", link:'mach-8',image: machine8}
+    {id: 8, name: "HP Digital Printer", link:'mach-8',image: machine8}
 ];

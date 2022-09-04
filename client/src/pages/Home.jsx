@@ -45,11 +45,12 @@ import logo7 from '../assets/images/Compnays/7.png'
 import logo8 from '../assets/images/Compnays/8.png'
 import logo9 from '../assets/images/Compnays/9.jpg'
 import logo10 from '../assets/images/Compnays/10.png'
+import logo11 from '../assets/images/Compnays/11.jpg'
 import logo12 from '../assets/images/Compnays/12.jpg'
 import logo13 from '../assets/images/Compnays/13.jpg'
-import logo14 from '../assets/images/Compnays/14.webp'
+import logo14 from '../assets/images/Compnays/14.jpg'
 import logo15 from '../assets/images/Compnays/15.jpg'
-
+import logo16 from '../assets/images/Compnays/16.png'
 
 
 import logo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
@@ -252,7 +253,8 @@ export default function Home() {
             setCompanyIn(true)
           }}>
             <div className='hidden w-full h-auto  lg:grid grid-cols-1 lg:grid-cols-8 gap-5 min-h-screen px-5'>
-              <div className=' w-full flex flex-col justify-center gap-5 pb-10'>
+              <div className=' w-full flex flex-col justify-center gap-5 pb-44'>
+                <CompanyCards image={logo11}/>
                 <CompanyCards image={logo4} />
                 <CompanyCards image={logo1} />
               </div>
@@ -281,9 +283,10 @@ export default function Home() {
                 <CompanyCards image={logo9} />
                 <CompanyCards image={logo10} />
               </div>
-              <div className=' w-full flex flex-col justify-center gap-5 pb-10'>
+              <div className=' w-full flex flex-col justify-center gap-5 pb-44'>
                 <CompanyCards image={logo12} />
                 <CompanyCards image={logo13} />
+                <CompanyCards image={logo16} />
               </div>
             </div>
           </ScrollTrigger>

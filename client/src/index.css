@@ -1,7 +1,6 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,10 +10,10 @@
         @apply border border-black;
     }
     .headerLinks{
-        @apply text-base font-light text-gray-600 hover:text-primary-500 ;
+        @apply text-lg font-light text-white hover:text-gray-300 ;
     }
     .activeHeaderLink{
-        @apply text-lg font-bold text-primary-500;
+        @apply font-bold text-gray-300 text-xl;
     }
     .socialIcons{
         @apply text-gray-500 cursor-pointer hover:text-primary-500;
@@ -27,6 +26,9 @@
     }
     .transBox{
         @apply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300;
+    }
+    .normshad{
+        @apply border border-gray-200;
     }
    
 }

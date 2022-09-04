@@ -152,7 +152,7 @@ export default function Contact() {
                   <div className=' items-start md:items-end'>
                     <h1 className='text-lg inline font-semibold'>Driving: </h1>
                     <p className=' inline font-light md:font-normal'>Refer to directions provided by 
-                      <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='text-primary-500 font-semibold'>Google Maps.</a>
+                      <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='text-primary-500 font-semibold'> Google Maps.</a>
                     </p>
                   </div>
                   <div className=' gap-2 items-end'>
@@ -175,18 +175,45 @@ export default function Contact() {
       data-aos='fade-up'
       data-aos-delay='150'
       >
-        <div className='w-full relative h-auto px-5 md:px-20 py-10 md:py-5 bg-gray-100'>
+        {/* Main Office */}
+        <div className='w-full relative h-auto px-5 md:px-20 py-10 pb-20 md:py-5 bg-gray-100'>
           <div className='h-auto flex flex-col md:flex-row '>
             <div className='h-80 w-full overflow-hidden py-5'>
               <img className=' w-auto' src={img2} alt="Place Holder" />
             </div>
             <div className=' w-full px-  md:px-20 py-5 flex flex-col gap-5'>
-              <h1 className='text-2xl font-semibold'>Addis Ababa, Ethiopia (Main Office)</h1>
+              <h1 className='text-2xl font-semibold'>Main Office & Advertising Plant(Addis Ababa, Ethiopia - Around Shola Gebeya)</h1>
               <div className='flex flex-col items-start gap-2'>
                 <h1 className='text-2xl font-semibold'>Address</h1>
                 <div className='flex flex-col gap-1  font-light'>
                   <p>Meseret Building</p>
                   <p>Kenenisa Ave</p>
+                  <p>Addis Ababa, Ethiopia</p>
+                </div>
+              </div>
+              <div className='flex flex-col items-start gap-2'>
+                <h1 className='text-2xl  font-semibold'>Phone / Fax</h1>
+                <div className='flex flex-col gap-1 font-light'>
+                  <a href='tel:+251911753962' className='hover:underline hover:text-primary-500'>+251 911 753 962</a>
+                  <p>Fax Number</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Side Office */}
+        <div className='w-full relative h-auto px-5 md:px-20 py-10 md:py-5 bg-gray-100'>
+          <div className='h-auto flex flex-col md:flex-row '>
+            <div className='h-80 w-full overflow-hidden py-5 order-2'>
+              <img className=' w-auto' src={img2} alt="Place Holder" />
+            </div>
+            <div className=' w-full px-  md:px-20 py-5 flex flex-col gap-5 order-1'>
+              <h1 className='text-2xl font-semibold'>Offsite Workshop Plant(Bole, Addis Ababa)</h1>
+              <div className='flex flex-col items-start gap-2'>
+                <h1 className='text-2xl font-semibold'>Address</h1>
+                <div className='flex flex-col gap-1  font-light'>
+                  <p>Behind Yemisirach</p>
+                  <p>Bole 12/13</p>
                   <p>Addis Ababa, Ethiopia</p>
                 </div>
               </div>

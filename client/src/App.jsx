@@ -10,12 +10,15 @@ import Product from './pages/Product'
 import Blog from './pages/Blog'
 import Gallery from './pages/Gallery'
 import Order from './pages/Order'
+import Header2 from './layouts/Header2'
+import SubBlog from './sub_pages/SubBlog'
 
 export default function App() {
   return (
     <Router>
     <Header/>
-        <main className='min-h-screen relative'>
+    {/* <Header2 /> */}
+        <main className='min-h-screen relative font-Sora'>
           <Routes>
             <Route path='/' element={ <Home/> }/>
             <Route path='/about/*' element={ <About/>} />
@@ -24,8 +27,9 @@ export default function App() {
             <Route path='/gallery' element={ <Gallery/>}/>
             <Route path='/order' element={<Order/>} />
             <Route path='/blog' element={ <Blog/>} />
-            {/* <Route path='/testi' element={ <Testi/>} /> */}
-            {/* <Route path='/test' element={<Test/>} /> */}
+            <Route path='/blog/:id' element={<SubBlog/>}/>
+            <Route path='/test' element={<Header2/>}/>
+
           </Routes>
         </main>
     <Footer/>
