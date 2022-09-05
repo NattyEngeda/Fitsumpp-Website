@@ -1,6 +1,6 @@
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/outline';
+import { ArrowRightIcon } from '@heroicons/react/outline';
 import { useState } from 'react';
-import { Modal, Button, Group, useMantineTheme } from '@mantine/core';
+import { Modal, Group, useMantineTheme } from '@mantine/core';
 
 export default function InfraComp(props) {
   const [opened, setOpened] = useState(false);
@@ -10,7 +10,6 @@ export default function InfraComp(props) {
   return (
     <>
       <Modal
-        
         size="xl"
         transition="fade"
         transitionDuration={600}
@@ -23,7 +22,7 @@ export default function InfraComp(props) {
         title={<h1 className='text-three-600 font-bold text-3xl'>{props.title}</h1>}
       >
         <div className='flex flex-col gap-5'>
-          <hr className='bg-three-600 w-2/3'/>
+          <hr className='bg-three-600 w-2/3' />
           <div>
             <p className='text-xl'>
               {props.detail}
@@ -31,7 +30,6 @@ export default function InfraComp(props) {
           </div>
         </div>
       </Modal>
-
       <div className='flex flex-col md:absolute lg:right-32 w-full h-auto md:h-96 md:grid grid-cols-3 md:py-10 lg:py-0 border border-gray-200 bg-white shadow-xl'>
         {/* Image Section */}
         <div className='overflow-hidden'>
@@ -43,7 +41,6 @@ export default function InfraComp(props) {
             />
           </div>
         </div>
-
         {/* Content Section */}
         <div className='flex flex-col items-start gap-6  col-span-2 px-5 py-1 '>
           <h1 className='text-[42px] '><span className='text-three-600 font-semibold'>{props.title}</span></h1>
@@ -53,7 +50,6 @@ export default function InfraComp(props) {
             <ArrowRightIcon className='w-5 text-three-600' />
           </Group>
         </div>
-
       </div>
     </>
   )

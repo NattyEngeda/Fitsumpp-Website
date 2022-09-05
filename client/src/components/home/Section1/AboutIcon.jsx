@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function AboutIcon(props) {
   return (
     <div className="p-4 w-full">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navigation, Autoplay } from "swiper";
@@ -29,7 +29,6 @@ import useWorkTiles from '../hooks/useWorkTiles';
 import ImageCounter from '../components/home/Section1/ImageCounter'
 import SectionOneSlider from '../components/home/Section1/SectionOneSlider';
 import WorksBox from '../components/WorksBox';
-import CompanyCardHolder from '../components/CompanyCardHolder'
 import CompanyCards from '../components/CompanyCards'
 // Images
 import image from '../assets/images/Horizontal Image/Horizontal Image.png'
@@ -65,7 +64,6 @@ import {
   PhoneIcon
 } from '@heroicons/react/outline'
 
-
 // Functions
 function checkName(id) {
   let name = '';
@@ -77,7 +75,6 @@ function checkName(id) {
   color = works[id - 1]['color'];
   style = works[id - 1]['textStyle'];
   color2 = works[id - 1]['color2'];
-
 
   let currentArr = [name, color, style, color2];
   return currentArr;
@@ -92,12 +89,9 @@ export default function Home() {
   let [nid, setNid] = useState(1);
 
   const executeScroll = () => myRef.current.scrollIntoView()
-
   const [companyIn, setCompanyIn] = useState(true);
   const transition = useTransition(companyIn, {
-
   });
-
 
   // Functions
   const changePage = () => {
@@ -248,13 +242,11 @@ export default function Home() {
           </div>
           {/* Company List For PC*/}
           <ScrollTrigger onEnter={() => {
-            // console.log("Enterrd")
-            // console.log(companyIn)
             setCompanyIn(true)
           }}>
             <div className='hidden w-full h-auto  lg:grid grid-cols-1 lg:grid-cols-8 gap-5 min-h-screen px-5'>
               <div className=' w-full flex flex-col justify-center gap-5 pb-44'>
-                <CompanyCards image={logo11}/>
+                <CompanyCards image={logo11} />
                 <CompanyCards image={logo4} />
                 <CompanyCards image={logo1} />
               </div>
@@ -266,7 +258,7 @@ export default function Home() {
               <div className=' w-full flex flex-col justify-center gap-5'>
                 <CompanyCards image={logo3} />
                 <CompanyCards
-                 image={logo14} />
+                  image={logo14} />
               </div>
               <div className=' w-full col-span-2 flex flex-col justify-center pb-44'>
                 {companyIn && <CompanyCards image={flogo} pad={'64px'} />}
@@ -351,7 +343,6 @@ export default function Home() {
       <section className="text-gray-600 body-font relative">
         <div className='min-h-screen px-5 md:px-5 lg:px-20 py-5 lg:py-10 flex flex-col gap-10'>
           <div className='flex flex-col gap-5'>
-            {/* <LocationMarkerIcon className='w-32 text-primary-500'/> */}
             <img
               className='w-32'
               src={location}
@@ -363,8 +354,6 @@ export default function Home() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.130074057898!2d38.791668391574696!3d9.021367451232171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850fa5a07cab%3A0x466c325b95cec544!2sFitsum%20Printing%20%26%20Advertising!5e0!3m2!1sen!2set!4v1661630845731!5m2!1sen!2set"
             width="100%"
             className='h-96 md:h-[30rem]'
-            // height="600px" /
-            // style="border:0" 
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

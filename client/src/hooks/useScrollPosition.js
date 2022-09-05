@@ -5,13 +5,10 @@ const useScrollPosition = () => {
     useEffect(()=>{
         const updatePosition = () => {
             setScrollPosition(window.pageYOffset);
-            // console.log(window.pageYOffset);
         };
         window.addEventListener('scroll', updatePosition);
         updatePosition();
-
         return () => window.removeEventListener('scroll', updatePosition);
-
     }, []);
     return scrollPosition;
 }

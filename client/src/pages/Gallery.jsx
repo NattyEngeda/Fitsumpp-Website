@@ -5,8 +5,12 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+
 // Data
 import GalleryImages from '../data/GalleryImages';
+// Aos Library
+import aos from 'aos';
+import "aos/dist/aos.css"
 
 // Function
 function srcset(image, size, rows = 1, cols = 1) {
@@ -21,9 +25,10 @@ export default function Gallery() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, []);
-
   return (
-    <section className='w-full'>
+    <section 
+    data-aos='fade-up'
+    className='w-full'>
       <div className='py-10 lg:py-5 flex flex-col gap-10'>
         <div className='flex flex-col items-center gap-3'>
           <h1 className='text-3xl text-four-500'>Gallery</h1>

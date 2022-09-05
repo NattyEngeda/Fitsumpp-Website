@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
-
+import React, { useEffect } from 'react'
 // Images
 import img1 from '../assets/images/Contact/Contact Us Random.webp'
 import img2 from '../assets/images/Contact/Office pic.jpg'
@@ -73,15 +72,14 @@ export default function Contact() {
                 <Modal />
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* Section */}
       <section
-      data-aos='fade-up'
-      data-aos-delay='200'
+        data-aos='fade-up'
+        data-aos-delay='200'
       >
         <div className='relative w-full h-auto flex flex-col items-center bg-white pt-80 md:py-10 gap-10 border border-gray-200 '>
           <div className='flex flex-col justify-center items-center gap-5'>
@@ -151,7 +149,7 @@ export default function Contact() {
                 <div className='flex flex-col gap-5'>
                   <div className=' items-start md:items-end'>
                     <h1 className='text-lg inline font-semibold'>Driving: </h1>
-                    <p className=' inline font-light md:font-normal'>Refer to directions provided by 
+                    <p className=' inline font-light md:font-normal'>Refer to directions provided by
                       <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='text-primary-500 font-semibold'> Google Maps.</a>
                     </p>
                   </div>
@@ -171,9 +169,9 @@ export default function Contact() {
       </section>
 
       {/* Section */}
-      <section 
-      data-aos='fade-up'
-      data-aos-delay='150'
+      <section
+        data-aos='fade-up'
+        data-aos-delay='150'
       >
         {/* Main Office */}
         <div className='w-full relative h-auto px-5 md:px-20 py-10 pb-20 md:py-5 bg-gray-100'>

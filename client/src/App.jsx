@@ -10,9 +10,8 @@ import Product from './pages/Product'
 import Blog from './pages/Blog'
 import Gallery from './pages/Gallery'
 import Order from './pages/Order'
-import Header2 from './layouts/Header2'
 import SubBlog from './sub_pages/SubBlog'
-import Test from './pages/Test'
+
 export default function App() {
   return (
     <Router>
@@ -28,9 +27,6 @@ export default function App() {
             <Route path='/order' element={<Order/>} />
             <Route path='/blog' element={ <Blog/>} />
             <Route path='/blog/:id' element={<SubBlog/>}/>
-            <Route path='/test' element={<Header2/>}/>
-            <Route path='/test2' element={<Test/>}/>
-
           </Routes>
         </main>
     <Footer/>

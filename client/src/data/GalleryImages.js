@@ -27,7 +27,6 @@ import img26 from '../assets/images/Gallery/26.webp'
 import img27 from '../assets/images/Gallery/27.webp'
 import img28 from '../assets/images/Gallery/28.webp'
 import img29 from '../assets/images/Gallery/29.webp'
-import img30 from '../assets/images/Gallery/20.webp'
 import img31 from '../assets/images/Gallery/31.webp'
 import img32 from '../assets/images/Gallery/32.webp'
 import img33 from '../assets/images/Gallery/33.webp'
@@ -36,14 +35,11 @@ import img35 from '../assets/images/Gallery/35.webp'
 import img36 from '../assets/images/Gallery/36.webp'
 import img37 from '../assets/images/Gallery/37.webp'
 import img38 from '../assets/images/Gallery/38.webp'
-// import img39 from '../assets/images/Gallery/39.webp'
 import img40 from '../assets/images/Gallery/40.webp'
 import img41 from '../assets/images/Gallery/41.webp'
 import img42 from '../assets/images/Gallery/42.webp'
 import img43 from '../assets/images/Gallery/43.webp'
 import img44 from '../assets/images/Gallery/44.webp'
-
-
 export default [
         { img: img1, title: "Zola Printing", author: "3D LighBox for Zola Printing", rows: 1, cols: 2 },
         { img: img2, title: "School of Tomorrow", author: "Binder for School of Tomorrow", rows: 3, cols: 2 }, 
@@ -86,9 +82,5 @@ export default [
         { img: img37, title: "Pens / Pens with Sprays", author: "Custom Pens with sprays for .Dot, UkAID ...", rows: 2, cols: 2 }, 
         { img: img38, title: "Agenda", author: "Agenda for CBE, Ministry of Agriculture, Addis International Bank ...", rows: 2, cols: 3 }, 
         { img: img43, title: "Scarfs", author: "Scarfs for Addis Ababa Management Institute, .DOT ...", rows: 1, cols: 1 }, 
-        { img: img42, title: "Bag", author: "Image Engraved Bags", rows: 1, cols: 1 }, 
-
-
-        
-            
+        { img: img42, title: "Bag", author: "Image Engraved Bags", rows: 1, cols: 1 },            
 ];

@@ -5,7 +5,6 @@ import icon3 from '../assets/images/Service Icon/Signage.png'
 import icon4 from '../assets/images/Service Icon/Full branding.png'
 import icon5 from '../assets/images/Service Icon/Large Format Printing.jpg'
 
-
 export default [
     {id: 1, title: "Offset Printing", icon: icon1},
     {id: 2, title: "Veichle Graphics", icon: icon2},

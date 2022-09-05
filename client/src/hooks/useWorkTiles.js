@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import useWindowResize from "./useWindowResize";
-
-
 const useWorkTiles = () => {
-
-    let windowWidth = useWindowResize();
     const checkWindow = () => {
         if (window.innerWidth >= 1280) {
             return 3;
@@ -14,10 +9,7 @@ const useWorkTiles = () => {
             return 1;
         }
     }
-
     const [tiles, setTiles] = useState(checkWindow());
-
-
     useEffect(() => {
         function handleTiles() {
             if (window.innerWidth >= 1280) {
@@ -32,7 +24,6 @@ const useWorkTiles = () => {
         handleTiles();
         return () => window.removeEventListener('resize', handleTiles);
     }, []);
-
     return tiles;
 }
 export default useWorkTiles;

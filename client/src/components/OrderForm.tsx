@@ -1,27 +1,20 @@
 import React, { useState } from 'react'
 import { useForm } from '@mantine/form'
-import { NumberInput, TextInput, Button, Select, Textarea, Notification, Group } from '@mantine/core'
-import { CheckCircleIcon } from '@heroicons/react/outline';
-
+import { NumberInput, TextInput, Button, Select, Textarea } from '@mantine/core'
 import axios from 'axios'
 
 // Styles
 import 'animate.css'
-import { useEffect } from 'react';
+// Icons
+import { CheckCircleIcon } from '@heroicons/react/outline';
 
 export default function OrderForm() {
-
-        const topScroll = () => {
-        window.scrollTo(0,0)
+    const topScroll = () => {
+        window.scrollTo(0, 0)
     }
-
-
-
     const [sendValue, setSendValue] = useState(false);
-
     const form = useForm({
         initialValues: { name: '', phone_number: '', email: '', product: '', quantity: '', description: '' },
-
         // functions will be used to validate values at corresponding key
         validate: {
             name: (value) => (value.length < 2 ? 'Name must have at least 2 letters' : null),
@@ -32,7 +25,6 @@ export default function OrderForm() {
             description: (value) => (value.length < 10 ? 'Use more than 10 words express what you want' : null)
         },
     });
-
     const handleSubmit = (values: typeof form.values) => {
         console.log(form.values);
         axios
@@ -43,33 +35,12 @@ export default function OrderForm() {
                     setSendValue(true);
                     form.reset();
                     topScroll();
-                                  
                 }
             })
             .catch(error => {
                 console.log(error)
             })
     };
-
-    const setPopUp = () =>{
-        const newform = 
-
-
-
-
-
-
-        setTimeout(() => {
-            setSendValue(true);
-        }, 1000);
-        return () => exitPopUp();
-    }
-    const exitPopUp = () =>{
-        setSendValue(false)
-    }
-
-
-
     return (
         <>
             {
@@ -78,52 +49,31 @@ export default function OrderForm() {
                     <CheckCircleIcon className='w-10 text-white' />
                     <h1 className='text-white '>Your Order Was Put Successfuly</h1>
                 </div>
-
             }
             <form
                 onSubmit={form.onSubmit(handleSubmit)}
                 className='flex flex-col gap-5 md:pr-10'
             >
-                {/* <TextInput label="Name" placeholder="Name" {...form.getInputProps('name')} />
-            <TextInput mt="sm" label="Email" placeholder="Email" {...form.getInputProps('email')} />
-            <NumberInput
-                mt="sm"
-                label="Age"
-                placeholder="Age"
-                min={0}
-                max={99}
-                {...form.getInputProps('age')}
-            />
-            */}
-
-
                 <TextInput
                     placeholder='Name'
-                    // onChange={(e) => setName(e.target.value)}
-                    // {sendValue ? }
-
                     label='Name'
                     size='md'
                     {...form.getInputProps('name')}
-                    // value={sendValue ? '' : null}
                 />
                 <TextInput
                     placeholder='0'
-                    // onChange={(e) => setPhoneNumber(e.target.value)}
                     label='Phone Number'
                     size='md'
                     {...form.getInputProps('phone_number')}
                 />
                 <TextInput
                     placeholder='Your Email'
-                    // onChange={(e) => setEmail(e.target.value)}
                     label='Email'
                     size='md'
                     {...form.getInputProps('email')}
                 />
                 <Select
                     label="Pick Product"
-                    // onSelect={(e) => setProduct(e.target.value)}
                     placeholder="Pick your Product"
                     {...form.getInputProps('product')}
                     size='md'
@@ -149,7 +99,6 @@ export default function OrderForm() {
                 />
                 <Textarea
                     placeholder='Description'
-                    // onChange={(e) => setDesc(e.target.value)}
                     label='Description'
                     size='md'
                     minRows={4}

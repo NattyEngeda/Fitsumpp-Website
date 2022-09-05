@@ -1,4 +1,4 @@
-import React,{ useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 // Aos Library
@@ -12,30 +12,25 @@ import 'animate.css';
 import logo from '../assets/images/logo/F Only Colored Logo.png'
 export default function Blog() {
   const Navigate = useNavigate();
-
-  useEffect(()=>{ 
-    window.scrollTo(0,0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   })
-
- const changePage = (comp) =>{
-  Navigate('/blog/'+comp);
+  const changePage = (comp) => {
+    Navigate('/blog/' + comp);
   }
   return (
     <div className='w-full min-h-screen py-10 px-5 md:px-52'>
       {/* Section */}
       <section className='flex flex-col gap-20'>
         {BlogTitles.map((items) => (
-          <div 
-          data-aos='fade-up'
-          data-aos-delay={items.delay}
-          key={items.id}
-          onClick={()=> changePage(items.id)}
-          style={{
-            // animationDuration: '2s',
-          }}
-          className={items.style}>
+          <div
+            data-aos='fade-up'
+            data-aos-delay={items.delay}
+            key={items.id}
+            onClick={() => changePage(items.id)}
+            className={items.style}>
             <div className='bg-blue-600 col-span-2 h-auto md:h-96 py'>
-                <img src={items.image} alt="" />
+              <img src={items.image} alt="" />
             </div>
             <div className='flex flex-col gap-5 px-5 md:px-10 py-5 justify-between'>
               <div className='flex flex-col gap-5'>
@@ -59,8 +54,6 @@ export default function Blog() {
             </div>
           </div>
         ))}
-
-
       </section>
     </div>
   )

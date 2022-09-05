@@ -6,7 +6,6 @@ import { ImageOverlay } from 'react-image-overlay-effect'
 // Aos Library
 import aos from 'aos';
 import "aos/dist/aos.css"
-
 // Images
 import fullLogo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
 import img1 from '../assets/images/About Us/Section 2.webp'
@@ -47,7 +46,6 @@ export default function About() {
   }, []);
   // Window Height calculation
   let windowHeight = window.innerHeight;
-
   // States
   const [active, setActive] = useState("Infa-1");
   const [isActive, setIsActive] = useState(false);
@@ -191,7 +189,6 @@ export default function About() {
       >
         <div className='w-full relative h-auto px-5 md:px-20'>
           <div className='flex flex-col gap-5'>
-            {/* <UserGroupIcon className='w-20 md:w-32 text-primary-500'/> */}
             <img
               className='w-20 md:w-32'
               src={staff}
@@ -219,7 +216,6 @@ export default function About() {
       >
         <div className='w-full px-5 md: md:px-20'>
           <div className='flex flex-col py-10 gap-5'>
-            {/* <CogIcon className='w-32 text-primary-500' /> */}
             <img
               className='w-20 md:w-32'
               src={role}
@@ -252,7 +248,6 @@ export default function About() {
               data-aos-delay='300'
               className='bg-three-400 col-span-2 shadow-xl'>
               <ul className='h-full flex flex-col items-start justify-evenly py-5 px-10 text-2xl'>
-
                 <li className=' hover:ml-10 active:ml-10 transition-all duration-100'>
                   <button
                     onClick={() => setActive("Infa-1")}
@@ -310,7 +305,6 @@ export default function About() {
               {active === 'Infa-3' && <InfraComp image={InData[2]['image']} title={InData[2]['title']} detail={InData[2]['detail']} />}
               {active === 'Infa-4' && <InfraComp image={InData[3]['image']} title={InData[3]['title']} detail={InData[3]['detail']} />}
               {active === 'Infa-5' && <InfraComp image={InData[4]['image']} title={InData[4]['title']} detail={InData[4]['detail']} />}
-
             </div>
           </div>
           {/* For Mobile View */}
@@ -327,7 +321,6 @@ export default function About() {
                     {mActive === 'MInfa-3' && <p>03. Printing</p>}
                     {mActive === 'MInfa-4' && <p>04. Finishing</p>}
                     {mActive === 'MInfa-5' && <p>05. Logestics</p>}
-
                   </div>
                   <div>{isActive ? '-' : '+'}</div>
                 </div>
@@ -496,7 +489,6 @@ export default function About() {
                     src={item.image}
                     description={<p className='text-2xl md:text-3xl text-white font-bold'>{item.name}</p>}
                   />
-                  {/* <img src={item.image} alt={item.name} />        */}
                 </div>
               ))
             }

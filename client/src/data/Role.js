@@ -7,16 +7,12 @@ import icon5 from '../assets/images/Service Icon/Large Format Printing.jpg'
 
 import car1 from '../assets/images/Services/car1.jpg'
 import car2 from '../assets/images/Services/car2.jpg'
-// import full1 from '../assets/images/Services/full1.jpg'
-// import full2 from '../assets/images/Services/full2.jpg'
 import full1 from '../assets/images/blogs/kirkos/1.webp'
 import full2 from '../assets/images/blogs/bezalel/1.webp'
 import offset1 from '../assets/images/Gallery/33.webp'
 import offset2 from '../assets/images/Gallery/29.webp'
 import sign1 from '../assets/images/Services/sign1.jpg'
 import sign2 from '../assets/images/Services/sign2.jpg'
-
-
 
 export default [
     {id: 1, name: "Veichle Graphics", icon:icon2, description: "If your company has a designated vehicle or fleet, adding graphics is an excellent form of advertising. Automotive graphics include decals and vinyl stickers that are fully customizable. They're one of the most effective types of marketing within the out-of-home advertising (OOH) umbrella", img1: car1, img2: car2},

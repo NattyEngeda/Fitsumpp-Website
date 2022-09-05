@@ -11,8 +11,6 @@ import img22 from '../assets/images/blogs/bezalel/2.webp'
 import img23 from '../assets/images/blogs/bezalel/3.webp'
 import img24 from '../assets/images/blogs/bezalel/4.jpg'
 import img25 from '../assets/images/blogs/bezalel/5.webp'
-
-
 export default [
     {
         id: 1, title: 'Full Branding', color: '#F47B20', name: 'Kirkost Subcity', logo: logo1, content: [
@@ -31,6 +29,4 @@ export default [
             { id: 5, img: img25 },
             ],
     },
-
-
 ]

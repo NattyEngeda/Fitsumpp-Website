@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { useSpring, animated, to } from '@react-spring/web'
-import { useGesture } from 'react-use-gesture'
+import React from 'react'
+import MiniCardSection8 from './MiniCardSection8';
+
+// Icons
 import {
     FcCalendar,
     FcWorkflow,
     FcCustomerSupport,
     FcComboChart
 } from "react-icons/fc";
-
-import MiniCardSection8 from './MiniCardSection8';
 
 function CardsSection8(props) {
     const checkIcon = (name) => {
@@ -28,12 +27,11 @@ function CardsSection8(props) {
             <div className="border-2 border-gray-200 flex flex-col  items-center px-4 py-6 rounded-lg shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-gray-50 duration-150 ">
                 <div>{checkIcon(props.name)}</div>
                 <h2 className="title-font font-medium text-3xl text-gray-900">
-                    <MiniCardSection8 id={props.id} num={props.num} duration={props.duration}/>
+                    <MiniCardSection8 id={props.id} num={props.num} duration={props.duration} />
                 </h2>
                 <p className="leading-relaxed">{props.desc}</p>
             </div>
         </div>
     )
 }
-
 export default CardsSection8;

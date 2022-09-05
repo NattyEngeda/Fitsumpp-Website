@@ -21,7 +21,7 @@ export default function ImageCounter(props) {
         className={checkCurrent(item.id,current)}></div>
 
         ))}
-       
+      
     </div>
     
   )
