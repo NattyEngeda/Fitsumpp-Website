@@ -97,6 +97,11 @@ export default function Footer() {
                 to='/order'
                 className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Order</Link>
               </li> 
+              <li>
+                <Link 
+                to='/blog'
+                className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Branding</Link>
+              </li> 
           </nav>  
         </div>
 
@@ -107,7 +112,7 @@ export default function Footer() {
     <div className="bg-gray-100">
       <div className="container mx-auto py-1 px-5 flex flex-wrap flex-col sm:flex-row">
         <p className="text-gray-500 text-sm text-center sm:text-left">© {tdate} Fitsum Advert —
-          <a href="https://twitter.com/NattyEngeda" rel="noopener noreferrer" className="text-primary-600 ml-1" target="_blank">@fistum</a>
+          <a href="https://www.facebook.com/techamachama" rel="noopener noreferrer" className="text-primary-600 ml-1" target="_blank">@fistum</a>
         </p>
        <SocialIcons/>
       </div>

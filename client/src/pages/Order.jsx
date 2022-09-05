@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/styles/Order.css'
 
-import { TextInput, Select, Textarea,Modal } from '@mantine/core'
+import { TextInput, Select, Textarea,Modal, NumberInput } from '@mantine/core'
 import axios from 'axios'
 import img1 from '../assets/images/Order/order.webp'
 import { useEffect, useState } from 'react'
@@ -108,6 +108,10 @@ export default function Order() {
                   { value: 'Other', label: 'Other' },
                 ]}
               />
+              <NumberInput
+                label="Quantity"
+                placeholder='1'
+              />
               <Textarea
                 placeholder='Description'
                 onChange={(e) => setDesc(e.target.value)}
@@ -117,7 +121,7 @@ export default function Order() {
               />
               <button 
               onClick={submit}
-              className='px-4 py-3 bg-primary-500 shadow-md hover:bg-primary-600 hover:shadow-xl text-xl text-white'>Order</button>
+              className='px-4 py-3 bg-green-600 shadow-md hover:bg-green-700 hover:shadow-xl text-xl text-white'>Order</button>
             </div>
             <div className="hidden md:flex overflow-hidden rounded-xl px-20">
               <img className='rounded-xl' src={img1} alt="Order Image" />

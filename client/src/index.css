@@ -10,13 +10,13 @@
         @apply border border-black;
     }
     .headerLinks{
-        @apply text-lg font-light text-white hover:text-gray-300 ;
+        @apply text-lg font-light text-gray-300 hover:text-gray-300 ;
     }
     .activeHeaderLink{
-        @apply font-bold text-gray-300 text-xl;
+        @apply font-bold text-white text-xl;
     }
     .socialIcons{
-        @apply text-gray-500 cursor-pointer hover:text-primary-500;
+        @apply text-gray-500 cursor-pointer;
     }
     .sectionOneBoxOff{
         @apply w-10 h-2 bg-gray-400;

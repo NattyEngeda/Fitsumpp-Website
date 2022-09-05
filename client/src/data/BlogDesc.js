@@ -16,7 +16,7 @@ import img26 from '../assets/images/blogs/bezalel/6.webp'
 
 export default [
     {
-        id: 1, title: 'Full Branding', name: 'Kirkost Subcity', logo: logo1, content: [
+        id: 1, title: 'Full Branding', color: '#F47B20', name: 'Kirkost Subcity', logo: logo1, content: [
             { img: img1, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] },
             { img: img2, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] },
             { img: img3, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] },
@@ -24,7 +24,7 @@ export default [
             { img: img5, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] }],
     },
     {
-        id: 2, title: 'Full Branding', name: 'Bezalel Aluminium', logo: logo2, content: [
+        id: 2, title: 'Full Branding', color: '#C12028', name: 'Bezalel Aluminium', logo: logo2, content: [
             { img: img21, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] },
             { img: img22, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] },
             { img: img23, desc: [{title: 'Title', body: 'Random Body Description Describing about the product that is being seen in the photo above of aside you and some random things to fill up the screen until the padding and white space is fully completed and the bueaty of the blog is reavealed'}] },

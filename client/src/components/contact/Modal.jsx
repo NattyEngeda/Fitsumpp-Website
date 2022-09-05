@@ -39,7 +39,7 @@ export default function Modale() {
         centered
         onClose={() => setOpened(false)}
         title={
-          <h1 className='text-2xl text-primary-500 font-bold'>Email</h1>
+          <h1 className='text-2xl text-primary-500 font-bold'>Message</h1>
         }
         size="lg"
         overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
@@ -62,6 +62,14 @@ export default function Modale() {
             onChange={(e)=> setEmail(e.target.value)}
 
             label="Email"
+            size='md'
+            withAsterisk
+          />
+           <TextInput
+            placeholder="Your Phone"
+            onChange={(e)=> setEmail(e.target.value)}
+
+            label="Phone"
             size='md'
             withAsterisk
           />

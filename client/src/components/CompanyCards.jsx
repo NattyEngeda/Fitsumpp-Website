@@ -9,7 +9,7 @@ export default function CompanyCards(props) {
                 paddingTop: props.pad,
                 paddingBottom: props.pad
               }}
-              className='h-auto w-auto' 
+              className=' h-44 md:h-auto w-auto' 
               src={props.image} 
               alt="First Company Logo" />
     </div>

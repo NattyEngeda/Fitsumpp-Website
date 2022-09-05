@@ -1,6 +1,9 @@
 import React,{ useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+// Aos Library
+import aos from 'aos';
+import "aos/dist/aos.css"
 // Data
 import BlogTitles from '../data/BlogTitles'
 // Styles
@@ -10,7 +13,7 @@ import logo from '../assets/images/logo/F Only Colored Logo.png'
 export default function Blog() {
   const Navigate = useNavigate();
 
-  useEffect(()=>{
+  useEffect(()=>{ 
     window.scrollTo(0,0);
   })
 
@@ -23,6 +26,8 @@ export default function Blog() {
       <section className='flex flex-col gap-20'>
         {BlogTitles.map((items) => (
           <div 
+          data-aos='fade-up'
+          data-aos-delay={items.delay}
           key={items.id}
           onClick={()=> changePage(items.id)}
           style={{

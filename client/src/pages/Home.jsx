@@ -145,7 +145,7 @@ export default function Home() {
             <ImageCounter work={works} current={nid} />
           </div>
           <SectionOneSlider countt={setNid} color={checkName(nid)[3]} />
-          <div className='w-52 h-52 absolute top-20 left-1 pattern-dots-md text-secondary-600'>
+          <div className='w-52 h-52 absolute  top-10 md:top-20 right-1 md:left-1 pattern-dots-md text-secondary-600'>
           </div>
         </div>
       </section>
@@ -208,7 +208,7 @@ export default function Home() {
 
       {/* Section */}
       <section data-aos="zoom-in">
-        <div className='w-full min-h-screen py-10 px-5'>
+        <div className='w-full min-h-[40rem] md:min-h-screen py-10 px-1 md:px-5'>
           {/* Behind the Scene Box */}
           <div className='absolute w-[50%] md:w-[30%] h-80 bg-gray-300 mt-56'>
 
@@ -235,7 +235,7 @@ export default function Home() {
       <section
         data-aos='zoom-in'
         className='relative'>
-        <div className='absolute h-[20rem] w-[28rem] top-0 right-0 pattern-dots-md text-primary-500'>
+        <div className='absolute h-[20rem] w-[28rem] top-28 md:top-0 right-0 pattern-dots-md text-green-600'>
 
         </div>
         <div className='absolute h-[20rem] w-[28rem] bottom-0 left-0 pattern-dots-md text-primary-500'>
@@ -243,13 +243,13 @@ export default function Home() {
         </div>
         <div className='w-full relative h-auto  flex flex-col items-center gap-16 py-5'>
           <div className='flex flex-col gap-2 lg:gap-5'>
-            <h1 className='text-3xl lg:text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
+            <h1 className='text-4xl lg:text-5xl text-center'>Some of our <span className='text-primary-500'>Satisfied Clients</span></h1>
             <hr className='border-2 border-primary-500 bg-primary-500 w-1/4 m-auto rounded-full' />
           </div>
           {/* Company List For PC*/}
           <ScrollTrigger onEnter={() => {
-            console.log("Enterrd")
-            console.log(companyIn)
+            // console.log("Enterrd")
+            // console.log(companyIn)
             setCompanyIn(true)
           }}>
             <div className='hidden w-full h-auto  lg:grid grid-cols-1 lg:grid-cols-8 gap-5 min-h-screen px-5'>
@@ -265,7 +265,8 @@ export default function Home() {
               </div>
               <div className=' w-full flex flex-col justify-center gap-5'>
                 <CompanyCards image={logo3} />
-                <CompanyCards image={logo14} />
+                <CompanyCards
+                 image={logo14} />
               </div>
               <div className=' w-full col-span-2 flex flex-col justify-center pb-44'>
                 {companyIn && <CompanyCards image={flogo} pad={'64px'} />}
@@ -294,7 +295,7 @@ export default function Home() {
           <div className='lg:hidden w-full px-5 lg:w-full h-auto flex flex-col items-center gap-2'>
 
             <div className='w-[60vw] m-auto'>
-              <CompanyCards image={logo5} />
+              <CompanyCards image={logo10} />
             </div>
 
             <div className='w-full my-1'>
@@ -303,11 +304,11 @@ export default function Home() {
               </div>
 
               <div className='w-full m-auto my-2'>
-                <CompanyCards image={logo2} />
+                <CompanyCards image={logo14} />
               </div>
 
               <div className='w-[75vw] m-auto'>
-                <CompanyCards image={logo3} />
+                <CompanyCards image={logo15} />
               </div>
             </div>
 
@@ -355,8 +356,8 @@ export default function Home() {
               className='w-32'
               src={location}
               alt="Location Icon" />
-            <h1 className='text-4xl text-primary-500'>Our Location</h1>
-            <hr className='border-2 border-primary-500 w-1/5 ' />
+            <h1 className='text-4xl text-green-600'>Our Location</h1>
+            <hr className='border-2 border-green-600 bg-green-600 w-1/5 ' />
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.130074057898!2d38.791668391574696!3d9.021367451232171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850fa5a07cab%3A0x466c325b95cec544!2sFitsum%20Printing%20%26%20Advertising!5e0!3m2!1sen!2set!4v1661630845731!5m2!1sen!2set"
@@ -372,23 +373,23 @@ export default function Home() {
             {/* Contact Section */}
             <div className=' h-auto flex flex-col gap-5 items-start'>
               <div className='flex gap-2'>
-                <PhoneIcon className='w-10 text-primary-500' />
-                <h1 className='text-3xl text-primary-500'>Contact</h1>
+                <PhoneIcon className='w-10 text-green-600' />
+                <h1 className='text-3xl text-green-600'>Contact</h1>
               </div>
-              <a href='tel:+251911753962' className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150 cursor-pointer  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</a>
+              <a href='tel:+251911753962' className='bg-green-600 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150 cursor-pointer  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</a>
               <div className='flex flex-col gap-1'>
-                <a href='tel:+251911753962' className='hover:underline hover:text-primary-500 cursor-pointer'>+251 911 753 962</a>
-                <a href='tel:+251902276627' className='hover:underline hover:text-primary-500 cursor-pointer'>+251 902 276 627</a>
-                <a href='tel:+251902278827' className='hover:underline hover:text-primary-500 cursor-pointer'>+251 902 278 827</a>
+                <a href='tel:+251911753962' className='hover:underline hover:text-green-600 cursor-pointer'>+251 911 753 962</a>
+                <a href='tel:+251902276627' className='hover:underline hover:text-green-600 cursor-pointer'>+251 902 276 627</a>
+                <a href='tel:+251902278827' className='hover:underline hover:text-green-600 cursor-pointer'>+251 902 278 827</a>
               </div>
             </div>
             {/* Address Section  */}
             <div className=' h-auto flex flex-col gap-5 items-start'>
               <div className='flex gap-2'>
-                <LocationMarkerIcon className='w-10 text-primary-500' />
-                <h1 className='text-3xl text-primary-500'>Address</h1>
+                <LocationMarkerIcon className='w-10 text-green-600' />
+                <h1 className='text-3xl text-green-600'>Address</h1>
               </div>
-              <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='bg-primary-500 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</a>
+              <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='bg-green-600 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</a>
 
               <div>
                 <p>Shola</p>
@@ -400,12 +401,12 @@ export default function Home() {
             {/* Bussiness Hours Section */}
             <div className=' h-auto flex flex-col gap-5 items-start'>
               <div className='flex gap-2'>
-                <ClockIcon className='w-10 text-primary-500' />
-                <h1 className='text-3xl text-primary-500'>Office Hours</h1>
+                <ClockIcon className='w-10 text-green-600' />
+                <h1 className='text-3xl text-green-600'>Office Hours</h1>
               </div>
               <Link
                 to='/contact#office'
-                className='bg-primary-500 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</Link>
+                className='bg-green-600 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</Link>
               <div>
                 <p>Monday - Friday: 2am - 12pm</p>
                 <p>Saturday: 2am - 6am</p>

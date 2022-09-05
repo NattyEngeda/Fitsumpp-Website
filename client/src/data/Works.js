@@ -10,7 +10,7 @@ import Foam3D2 from '../assets/images/Section1/3D Foam2.webp'
 import Signage from '../assets/images/Section1/Signage.webp'
 
 export default [
-    {id: 1, name: "Bussiness Cards", color: 'linear-gradient(to top, #00b300 70%, #0000 20%)' , color2: '#00b300', image: BusinessCards, textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
+    {id: 1, name: "Bussiness Cards", color: 'linear-gradient(to top, #37A34A 70%, #0000 20%)' , color2: '#00b300', image: BusinessCards, textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
     {id: 2, name: "3D Foam Cut-out", color: 'linear-gradient(to top, #1e40af 70%, #0000 20%)',  color2: '#1e40af',image: Foam3D, cname: 'w-10 h-2 bg-[#1e40af]', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
     {id: 3, name: "P6 LED displays", color: 'linear-gradient(to top, #EA5C55 70%, #0000 20%)',  color2: '#EA5C55',image: P6LEDs, cname: 'w-10 h-2 bg-[#EA5C55]', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},
     {id: 4, name: "Car Brandings", color: 'linear-gradient(to top, #9ca3af 70%, #0000 20%) ', color2: '#9ca3af', image: CarBranding, cname: 'w-10 h-2 bg-gray-700', textStyle: "font-semibold px-2 pb-5 text-4xl md:text-6xl lg:text-7xl"},

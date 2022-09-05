@@ -1,6 +1,9 @@
 import React,{ useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
+// AOS Library
+import aos from 'aos';
+import "aos/dist/aos.css"
 // Data
 import BlogDesc from '../data/BlogDesc';
 
@@ -13,7 +16,9 @@ export default function SubBlog() {
   // console.log(data)
 
   return (
-    <div className='w-full min-h-screen py-5 md:p-20 boor flex flex-col gap-5'>
+    <div
+    data-aos='fade-up'
+    className='w-full min-h-screen py-5 md:p-20 flex flex-col gap-5'>
       <div className='flex flex-row gap-5 items-center'>
         <div>
           <img 
@@ -23,7 +28,11 @@ export default function SubBlog() {
         </div>
         <div className='flex flex-row items-center gap-3 text-xl md:text-3xl'>
           <p> - </p>
-          <h1 className='text-2xl md:text-3xl text-[#F47B20]'>{data.name}</h1>
+          <h1 
+          style={{
+            color: data.color
+          }}
+          className='text-2xl md:text-3xl'>{data.name}</h1>
           <p> - </p>
           <h1 className='md:text-2xl'>{data.title}</h1>
         </div>
