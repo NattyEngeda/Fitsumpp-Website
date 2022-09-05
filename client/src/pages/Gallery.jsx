@@ -34,7 +34,8 @@ export default function Gallery() {
           <h1 className='text-3xl text-four-500'>Gallery</h1>
           <hr className='w-[5%] border-2 border-four-500 bg-four-500 rounded-full' />
         </div>
-        <div className='px-1 md:px-5'>
+        {/* For PC */}
+        <div className='hidden md:block px-1 md:px-5'>
           <ImageList
             sx={{
               width: "100%",
@@ -49,6 +50,44 @@ export default function Gallery() {
                 key={item.img}
                 cols={item.cols || 1}
                 rows={item.rows || 1}
+              >
+                <img
+                  {...srcset(item.img, 350, item.rows, item.cols)}
+                  alt={item.title}
+                  loading="lazy"
+                />
+                <ImageListItemBar
+                  title={item.title}
+                  subtitle={item.author}
+                  actionIcon={
+                    <IconButton
+                      sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                      aria-label={`info about ${item.title}`}
+                    >
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </div>
+        {/* For Mobile Phones */}
+        <div className='px-1 md:px-5'>
+          <ImageList
+            sx={{
+              width: "100%",
+              height: "100%"
+            }}
+            variant="quilted"
+            cols={1}
+            rowHeight={300}
+          >
+            {GalleryImages.map((item) => (
+              <ImageListItem
+                key={item.img}
+                cols={1 || 1}
+                rows={1 || 1}
               >
                 <img
                   {...srcset(item.img, 350, item.rows, item.cols)}
