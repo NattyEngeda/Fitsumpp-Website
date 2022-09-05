@@ -26,20 +26,17 @@ export default function OrderForm() {
         },
     });
     const handleSubmit = (values: typeof form.values) => {
-        console.log(form.values);
         axios
             .post('http://localhost:5000/api/order', form.values)
             .then(response => {
                 if (response.status == 200) {
-                    console.log('success');
                     setSendValue(true);
                     form.reset();
                     topScroll();
                 }
             })
             .catch(error => {
-                console.log(error)
-            })
+                })
     };
     return (
         <>

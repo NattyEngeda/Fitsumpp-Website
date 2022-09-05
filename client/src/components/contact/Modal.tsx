@@ -22,12 +22,10 @@ export default function Modale() {
     },
   });
   const handleSubmit = (values: typeof form.values) => {
-    console.log(values)
     axios
       .post('http://localhost:5000/api/message', form.values)
       .then(response => {
         if (response.status == 200) {
-          console.log('success');
           setOpened(false);
           setSendValue(true);
           form.reset();
