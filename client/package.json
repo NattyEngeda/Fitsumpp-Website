@@ -17,6 +17,7 @@
     "@mantine/core": "^5.2.4",
     "@mantine/form": "^5.2.4",
     "@mantine/hooks": "^5.2.4",
+    "@mantine/notifications": "^5.2.5",
     "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
     "@tabler/icons": "^1.92.0",

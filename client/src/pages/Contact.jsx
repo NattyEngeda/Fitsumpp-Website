@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import img1 from '../assets/images/Contact/Contact Us Random.webp'
 import img2 from '../assets/images/Contact/Office pic.jpg'
 // Components
-import Modal from '../components/contact/Modal'
+import Modal from '../components/contact/Modal.tsx'
 // Icons
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import {

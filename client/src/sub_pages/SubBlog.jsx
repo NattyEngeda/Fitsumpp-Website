@@ -38,28 +38,18 @@ export default function SubBlog() {
         </div>
       </div>
       <hr />
-      <div className='w-full h-auto  flex flex-col gap-20 md:gap-10 py-10 px-5 md:px-0'>
+      <div className='w-full h-auto grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-10 py-10 px-5 md:px-0'>
         {data.content.map((item)=>(
           <div 
           key={item.id}
-          className=' w-full h-auto flex flex-col md:grid grid-cols-2 gap-5'>
+          className=' w-full h-auto flex flex-col'>
               <div>
                 <img
-                className='w-auto max-h-screen '
+                className='w-auto h-[30rem]'
                 src={item.img} 
                 alt="Image" />
               </div>
-              <div className='md:px-5'>
-                {/* <p className='text-xl md:text-3xl font-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aliquam inventore magni quis nulla blanditiis optio beatae ullam accusantium! Dolores, assumenda voluptatem commodi quia rem obcaecati accusantium ex animi dignissimos!</p> */}
-                {
-                  item.desc.map((descs)=>(
-                    <div className='flex flex-col gap-5'>
-                      <h1 className='text-xl md:text-3xl font-bold '>{descs.title}</h1>
-                      <p className='text-lg md:text-2xl'>{descs.body}</p>
-                    </div>
-                  ))
-                }
-              </div>
+              
           </div>
         ))}
         </div>
