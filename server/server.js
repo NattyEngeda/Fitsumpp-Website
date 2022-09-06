@@ -62,7 +62,7 @@ app.post('/api/message', (req, res, next) =>{
         "<b>Message</b> \n <b>Name: </b>" + name + "\n <b>Phone Number: </b>"+ phone_number + "\n <b>Email: </b>" + email + "\n <b>Message: </b>" + message,
         {parse_mode: "HTML"}
     )
-    res.send('success'); 
+    res.json('success'); 
 })
 
 app.listen(port, () => {

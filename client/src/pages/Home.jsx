@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRightIcon } from '@heroicons/react/outline';
 import ScrollTrigger from 'react-scroll-trigger';
 import { useTransition, animated } from 'react-spring';
-
+import axios from 'axios';
 // Aos Library
 import aos from 'aos';
 import "aos/dist/aos.css"
@@ -81,6 +81,12 @@ function checkName(id) {
 }
 
 export default function Home() {
+    // Fetch Test
+  
+    
+
+
+
   // Navigate function for navigateion to pages
   let navigate = useNavigate();
   // Determine worktiles number 1-3

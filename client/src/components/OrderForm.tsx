@@ -30,17 +30,17 @@ export default function OrderForm() {
         //     'Access-Control-Allow-Origin': true,
         //   },
 
-        // axios
-        //     .post('https://www.fitsumpp.com/api/order', form.values)
-        //     .then(response => {
-        //         if (response.status == 200) {
-        //             setSendValue(true);
-        //             form.reset();
-        //             topScroll();
-        //         }
-        //     })
-        //     .catch(error => {
-        //         })
+        axios
+            .post('http://localhost:5000/api/order', form.values)
+            .then(response => {
+                if (response.status == 200) {
+                    setSendValue(true);
+                    form.reset();
+                    topScroll();
+                }
+            })
+            .catch(error => {
+                })
                 // new
             // headers: {
             //     'Access-Control-Allow-Origin': true,
@@ -62,13 +62,13 @@ export default function OrderForm() {
             //     url: 'https://www.fitsumpp.com/api/order',
             //     data: form.values
             // });
-                const requestOptions = {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json'},
-                    body: JSON.stringify(form.values)
-                };
-                fetch('https://www.fitsumpp.com/api/order', requestOptions)
-                    .then(response => response.json())
+                // const requestOptions = {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json'},
+                //     body: JSON.stringify(form.values)
+                // };
+                // fetch('https://www.fitsumpp.com/api/order', requestOptions)
+                //     .then(response => response.json())
 
     };
     return (

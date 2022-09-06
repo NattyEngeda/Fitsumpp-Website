@@ -8,8 +8,8 @@ import { CheckCircleIcon } from '@heroicons/react/outline';
 export default function Modale() {
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
-
   const [sendValue, setSendValue] = useState(false);
+  const url = "http://localhost:5000/api/message";
 
   const form = useForm({
     initialValues: { name: '', email: '', phone_number: '', message: '' },
@@ -23,7 +23,7 @@ export default function Modale() {
   });
   const handleSubmit = (values: typeof form.values) => {
     axios
-      .post('https://www.fitsumpp.com/api/message', form.values)
+      .post('http://localhost:5000/api/message', form.values)
       .then(response => {
         if (response.status == 200) {
           setOpened(false);
@@ -31,7 +31,35 @@ export default function Modale() {
           form.reset();
         }
       })
+    // fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     'Accept': 'applicatin/json',
+    //     'Content-Type': ' application/json',
+    //   },
+    // }).then(res => res.json())
+    //   .then(res => {
+    //     if(res.status == 200){
+    //       console.log('accepted');
+    //     }else{
+    //       console.log(res.error)
+    //     }
+    //   })
+    // const host = 'http://localhost:5000/api'
+    // const route = 'message'
+    // const requestOptions ={
+    //   method: 'POST',
+    //   headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+    //   mode: 'cors',
+    // };
+    // return fetch(host + route, requestOptions). then((resppnse)=> response.json())
+
+    
   }
+
+
+
+
   return (
     <>
       {
