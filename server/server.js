@@ -50,7 +50,7 @@ app.post('/api/order', (req, res, next)=>{
 
 // Message Route
 app.post('/api/message', (req, res, next) =>{
-    console.log(req.body);
+    // console.log(req.body);
     let name = req.body.name;
     let phone_number = req.body.phone_number;
     let email = req.body.email;

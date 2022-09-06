@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from '@mantine/form'
 import { NumberInput, TextInput, Button, Select, Textarea } from '@mantine/core'
-import axios from 'axios'
+import axios, { Axios } from 'axios'
 
 // Styles
 import 'animate.css'
@@ -26,17 +26,50 @@ export default function OrderForm() {
         },
     });
     const handleSubmit = (values: typeof form.values) => {
-        axios
-            .post('http://localhost:5000/api/order', form.values)
-            .then(response => {
-                if (response.status == 200) {
-                    setSendValue(true);
-                    form.reset();
-                    topScroll();
-                }
-            })
-            .catch(error => {
-                })
+        // headers: {
+        //     'Access-Control-Allow-Origin': true,
+        //   },
+
+        // axios
+        //     .post('https://www.fitsumpp.com/api/order', form.values)
+        //     .then(response => {
+        //         if (response.status == 200) {
+        //             setSendValue(true);
+        //             form.reset();
+        //             topScroll();
+        //         }
+        //     })
+        //     .catch(error => {
+        //         })
+                // new
+            // headers: {
+            //     'Access-Control-Allow-Origin': true,
+            //   },
+            // axios
+            //     .post('https://www.fitsumpp.com/api/order', form.values)
+            //     .then(response => {
+            //         if (response.status == 200) {
+            //             setSendValue(true);
+            //             form.reset();
+            //             topScroll();
+            //         }
+            //     })
+            //     .catch(error => {
+            //         })
+            // Axios({
+            //     method: 'post',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     url: 'https://www.fitsumpp.com/api/order',
+            //     data: form.values
+            // });
+                const requestOptions = {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json'},
+                    body: JSON.stringify(form.values)
+                };
+                fetch('https://www.fitsumpp.com/api/order', requestOptions)
+                    .then(response => response.json())
+
     };
     return (
         <>

@@ -23,7 +23,7 @@ export default function Modale() {
   });
   const handleSubmit = (values: typeof form.values) => {
     axios
-      .post('http://localhost:5000/api/message', form.values)
+      .post('https://www.fitsumpp.com/api/message', form.values)
       .then(response => {
         if (response.status == 200) {
           setOpened(false);
