@@ -83,11 +83,7 @@ function checkName(id) {
 export default function Home() {
     // Fetch Test
   
-    
-
-
-
-  // Navigate function for navigateion to pages
+    // Navigate function for navigateion to pages
   let navigate = useNavigate();
   // Determine worktiles number 1-3
   const tiles = useWorkTiles();
@@ -235,7 +231,7 @@ export default function Home() {
       <section
         data-aos='zoom-in'
         className='relative'>
-        <div className='absolute h-[20rem] w-[28rem] top-28 md:top-0 right-0 pattern-dots-md text-green-600'>
+        <div className='absolute h-[20rem] w-[28rem] top-28 md:top-0 right-0 pattern-dots-md text-primary-600'>
 
         </div>
         <div className='absolute h-[20rem] w-[28rem] bottom-0 left-0 pattern-dots-md text-primary-500'>
@@ -353,8 +349,8 @@ export default function Home() {
               className='w-32'
               src={location}
               alt="Location Icon" />
-            <h1 className='text-4xl text-green-600'>Our Location</h1>
-            <hr className='border-2 border-green-600 bg-green-600 w-1/5 ' />
+            <h1 className='text-4xl text-primary-600'>Our Location</h1>
+            <hr className='border-2 border-primary-600 bg-primary-600 w-1/5 ' />
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1469.130074057898!2d38.791668391574696!3d9.021367451232171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850fa5a07cab%3A0x466c325b95cec544!2sFitsum%20Printing%20%26%20Advertising!5e0!3m2!1sen!2set!4v1661630845731!5m2!1sen!2set"
@@ -368,23 +364,23 @@ export default function Home() {
             {/* Contact Section */}
             <div className=' h-auto flex flex-col gap-5 items-start'>
               <div className='flex gap-2'>
-                <PhoneIcon className='w-10 text-green-600' />
-                <h1 className='text-3xl text-green-600'>Contact</h1>
+                <PhoneIcon className='w-10 text-primary-600' />
+                <h1 className='text-3xl text-primary-600'>Contact</h1>
               </div>
-              <a href='tel:+251911753962' className='bg-green-600 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150 cursor-pointer  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</a>
+              <a href='tel:+251911753962' className='bg-primary-600 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150 cursor-pointer  hover:-translate-y-1 hover:scale-110  duration-150 '>Call Now</a>
               <div className='flex flex-col gap-1'>
-                <a href='tel:+251911753962' className='hover:underline hover:text-green-600 cursor-pointer'>+251 911 753 962</a>
-                <a href='tel:+251902276627' className='hover:underline hover:text-green-600 cursor-pointer'>+251 902 276 627</a>
-                <a href='tel:+251902278827' className='hover:underline hover:text-green-600 cursor-pointer'>+251 902 278 827</a>
+                <a href='tel:+251911753962' className='hover:underline hover:text-primary-600 cursor-pointer'>+251 911 753 962</a>
+                <a href='tel:+251902276627' className='hover:underline hover:text-primary-600 cursor-pointer'>+251 902 276 627</a>
+                <a href='tel:+251902278827' className='hover:underline hover:text-primary-600 cursor-pointer'>+251 902 278 827</a>
               </div>
             </div>
             {/* Address Section  */}
             <div className=' h-auto flex flex-col gap-5 items-start'>
               <div className='flex gap-2'>
-                <LocationMarkerIcon className='w-10 text-green-600' />
-                <h1 className='text-3xl text-green-600'>Address</h1>
+                <LocationMarkerIcon className='w-10 text-primary-600' />
+                <h1 className='text-3xl text-primary-600'>Address</h1>
               </div>
-              <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='bg-green-600 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</a>
+              <a href='https://www.google.com/maps/dir//2QCR%2BHVQ+Fitsum+Printing+%26+Advertising,+Addis+Ababa/@9.0214663,38.7916879,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x164b850fa5a07cab:0x466c325b95cec544!2m2!1d38.7922364!2d9.0214663' target='blank' className='bg-primary-600 px-12 md:px-14 lg:px-14  py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>Get Directions</a>
 
               <div>
                 <p>Shola</p>
@@ -396,12 +392,12 @@ export default function Home() {
             {/* Bussiness Hours Section */}
             <div className=' h-auto flex flex-col gap-5 items-start'>
               <div className='flex gap-2'>
-                <ClockIcon className='w-10 text-green-600' />
-                <h1 className='text-3xl text-green-600'>Office Hours</h1>
+                <ClockIcon className='w-10 text-primary-600' />
+                <h1 className='text-3xl text-primary-600'>Office Hours</h1>
               </div>
               <Link
                 to='/contact#office'
-                className='bg-green-600 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</Link>
+                className='bg-primary-600 px-16 py-3 text-white w-auto hover:shadow-xl transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-150'>View Office</Link>
               <div>
                 <p>Monday - Friday: 2am - 12pm</p>
                 <p>Saturday: 2am - 6am</p>

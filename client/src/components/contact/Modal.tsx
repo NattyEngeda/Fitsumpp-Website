@@ -23,7 +23,7 @@ export default function Modale() {
   });
   const handleSubmit = (values: typeof form.values) => {
     axios
-      .post('http://localhost:5000/api/message', form.values)
+      .post('https://api.fitsumpp.com/message', form.values)
       .then(response => {
         if (response.status == 200) {
           setOpened(false);
@@ -31,40 +31,12 @@ export default function Modale() {
           form.reset();
         }
       })
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     'Accept': 'applicatin/json',
-    //     'Content-Type': ' application/json',
-    //   },
-    // }).then(res => res.json())
-    //   .then(res => {
-    //     if(res.status == 200){
-    //       console.log('accepted');
-    //     }else{
-    //       console.log(res.error)
-    //     }
-    //   })
-    // const host = 'http://localhost:5000/api'
-    // const route = 'message'
-    // const requestOptions ={
-    //   method: 'POST',
-    //   headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-    //   mode: 'cors',
-    // };
-    // return fetch(host + route, requestOptions). then((resppnse)=> response.json())
-
-    
   }
-
-
-
-
   return (
     <>
       {
         sendValue &&
-        <div className='absolute top-5 md:bottom-5 right-5 w-60 h-20 bg-green-600 normshad rounded-lg shadow-xl backdrop-blur-sm bg-opacity-90 flex flex-row items-center px-3 gap-5 animate__animated animate__slideInRight'>
+        <div className='absolute top-5 md:bottom-5 right-5 w-60 h-20 bg-primary-600 normshad rounded-lg shadow-xl backdrop-blur-sm bg-opacity-90 flex flex-row items-center px-3 gap-5 animate__animated animate__slideInRight'>
           <CheckCircleIcon className='w-10 text-white' />
           <h1 className='text-white '>Your Order Was Put Successfuly</h1>
         </div>
@@ -115,7 +87,7 @@ export default function Modale() {
             />
             <Button
               type="submit"
-              className='px-5 py-3 h-16 bg-green-600 text-lg text-white shadow-md hover:bg-green-700 hover:shadow-xl'>Send</Button>
+              className='px-5 py-3 h-16 bg-primary-600 text-lg text-white shadow-md hover:bg-primary-700 hover:shadow-xl'>Send</Button>
           </div>
         </form>
       </Modal>
@@ -124,7 +96,7 @@ export default function Modale() {
         <button
           type='button'
           onClick={() => setOpened(true)}
-          className='bg-green-600 px-5 py-3 text-white shadow-lg hover:shadow-xl'
+          className='bg-primary-600 px-5 py-3 text-white shadow-lg hover:shadow-xl'
         >Send Message</button>
       </Group>
     </>

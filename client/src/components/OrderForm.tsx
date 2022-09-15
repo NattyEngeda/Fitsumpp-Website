@@ -26,12 +26,8 @@ export default function OrderForm() {
         },
     });
     const handleSubmit = (values: typeof form.values) => {
-        // headers: {
-        //     'Access-Control-Allow-Origin': true,
-        //   },
-
-        axios
-            .post('http://localhost:5000/api/order', form.values)
+            axios
+            .post('https://api.fitsumpp.com/order', form.values)
             .then(response => {
                 if (response.status == 200) {
                     setSendValue(true);
@@ -41,34 +37,6 @@ export default function OrderForm() {
             })
             .catch(error => {
                 })
-                // new
-            // headers: {
-            //     'Access-Control-Allow-Origin': true,
-            //   },
-            // axios
-            //     .post('https://www.fitsumpp.com/api/order', form.values)
-            //     .then(response => {
-            //         if (response.status == 200) {
-            //             setSendValue(true);
-            //             form.reset();
-            //             topScroll();
-            //         }
-            //     })
-            //     .catch(error => {
-            //         })
-            // Axios({
-            //     method: 'post',
-            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            //     url: 'https://www.fitsumpp.com/api/order',
-            //     data: form.values
-            // });
-                // const requestOptions = {
-                //     method: 'POST',
-                //     headers: { 'Content-Type': 'application/json'},
-                //     body: JSON.stringify(form.values)
-                // };
-                // fetch('https://www.fitsumpp.com/api/order', requestOptions)
-                //     .then(response => response.json())
 
     };
     return (
@@ -135,7 +103,7 @@ export default function OrderForm() {
                     {...form.getInputProps('description')}
                 />
                 <Button
-                    className='px-4 py-3 h-16 bg-green-600 shadow-md hover:bg-green-700 hover:shadow-xl text-xl text-white'
+                    className='px-4 py-3 h-16 bg-primary-600 shadow-md hover:bg-primary-700 hover:shadow-xl text-xl text-white'
                     type="submit"
                 >
                     Submit

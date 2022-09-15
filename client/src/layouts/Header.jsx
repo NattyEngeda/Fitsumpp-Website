@@ -1,12 +1,22 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MenuIcon } from '@heroicons/react/outline'
-import { Menu, Button, } from '@mantine/core';
+import { Menu, Button,Modal } from '@mantine/core';
 import { IconPhoto, IconHome, IconUser, IconShoppingCart, IconNote, IconNews } from '@tabler/icons';
+
 // logo
 import logo from '../assets/images/logo/F Only Colored Logo.png'
 import ListItems from '../components/ListItems'
+// Images
+import adey from '../assets/images/adey.png'
+import adey2 from '../assets/images/adey2.jpg'
+import adey3 from '../assets/images/adey3.jpg'
+// Styles
+import '../assets/styles/rotateAdeyAbeba.css'
+
 export default function Header() {
+    const [ adeyOpened, setAdeyOpened ] = useState(false);
+
     return (
         <header className='w-full sticky top-0 right-0 shadow-lg grid md:grid-cols-7 grid-cols-10 z-30'>
             <div className='bg-white col-span-2 md:col-span-1 transition backdrop-filter backdrop-blur-lg bg-opacity-20'>
@@ -22,7 +32,7 @@ export default function Header() {
                     </Link>
                 </div>
             </div>
-            <div className='bg-green-600 col-span-8 md:col-span-6 w-auto lg:flex-none px-5 py-2 relative flex md:block items-center justify-end md:justify-center'>
+            <div className='bg-primary-600 col-span-8 md:col-span-6 w-auto lg:flex-none px-5 py-2 relative flex md:block items-center justify-end md:justify-center'>
                 {/* Website Headers */}
                 <div className='hidden md:flex items-center h-full space-x-5 pl-20'>
                     <ListItems link="/" name="Home" />
@@ -79,6 +89,27 @@ export default function Header() {
                         </Menu.Dropdown>
                     </Menu>
                 </div>
+                {/* Adey Abeba */}
+                <div className='absolute top-2 md:top-1 right-16 md:right-5 rotateAdey'>
+                   <button
+                   onClick={() => setAdeyOpened(true)}
+                   >
+                   <img 
+                        className='w-20 md:w-28'
+                        src={adey} 
+                        alt="Adey Abeba" /> 
+                   </button>
+                </div>
+                <Modal
+                    opened={adeyOpened}
+                    onClose={()=> setAdeyOpened(false)}
+                    title="Modal"
+                >
+                <div className='w-full h-full'>
+                    <img src={adey3} alt="Happy New Year" />
+
+                </div>
+                </Modal>
             </div>
         </header>
     )

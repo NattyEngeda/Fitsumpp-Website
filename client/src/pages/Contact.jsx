@@ -202,10 +202,10 @@ export default function Contact() {
         {/* Side Office */}
         <div className='w-full relative h-auto px-5 md:px-20 py-10 md:py-5 bg-gray-100'>
           <div className='h-auto flex flex-col md:flex-row '>
-            <div className='h-80 w-full overflow-hidden py-5 order-2'>
+            <div className='h-80 w-full overflow-hidden py-5 md:order-2'>
               <img className=' w-auto' src={img2} alt="Place Holder" />
             </div>
-            <div className=' w-full px-  md:px-20 py-5 flex flex-col gap-5 order-1'>
+            <div className=' w-full px-  md:px-20 py-5 flex flex-col gap-5 md:order-1'>
               <h1 className='text-2xl font-semibold'>Offsite Workshop Plant(Bole, Addis Ababa)</h1>
               <div className='flex flex-col items-start gap-2'>
                 <h1 className='text-2xl font-semibold'>Address</h1>

@@ -16,10 +16,9 @@ app.use(bodyParser.json());
 const bot = new TelegramBot(token, {polling: true});
 
 // Valid IDs for Telegram Bot 
-const natty = 359753050;
-const fitsum = '';
+const natty = '359753050';
+const fitsum = '604042213';
 const teamr = '';
-
 
 app.get("/api", (req, res) =>{
     res.send('Home page');
@@ -28,6 +27,7 @@ app.get("/api", (req, res) =>{
 bot.onText(/\/start/, (msg) => {
     bot.sendMessage(msg.chat.id, 'Welcome');
     bot.sendMessage(msg.chat.id,"<b>Name: </b>" + msg.chat.first_name + "\n <b>Id:</b> "+ msg.chat.id, {parse_mode: "HTML"});
+    console.log(msg.chat.id);
 })
 
 // Order Route
@@ -66,6 +66,6 @@ app.post('/api/message', (req, res, next) =>{
 })
 
 app.listen(port, () => {
-    console.log("server started")
+    console.log("server started");
    
 });

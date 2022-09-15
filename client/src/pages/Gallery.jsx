@@ -73,7 +73,7 @@ export default function Gallery() {
           </ImageList>
         </div>
         {/* For Mobile Phones */}
-        <div className='px-1 md:px-5'>
+        <div className='md:hidden px-1 md:px-5'>
           <ImageList
             sx={{
               width: "100%",

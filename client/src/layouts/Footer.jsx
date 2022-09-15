@@ -83,7 +83,7 @@ export default function Footer() {
       </div>
       {/* Random Colord */}
       <div className='flex justify-evenly h-4'>
-        <div className='bg-primary-500 h-full w-full'>
+        <div className='bg-green-600 h-full w-full'>
         </div>
         <div className='bg-gray-300 h-full w-full'>
         </div>
