@@ -86,7 +86,7 @@ export default function Footer() {
         <div className='bg-green-600 h-full w-full'>
         </div>
         <div className='bg-gray-300 h-full w-full'>
-        </div>
+        </div> 
         <div className='bg-secondary-500 h-full w-full'>
         </div>
         <div className='bg-three-500 h-full w-full'>
