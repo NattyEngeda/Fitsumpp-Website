@@ -45,6 +45,11 @@ app.post('/api/order', (req, res, next)=>{
         "<b>Order</b> \n <b>Name: </b>" + name + "\n <b>Phone Number: </b>"+ phone_number + "\n <b>Email: </b>" + email + "\n <b>Product: </b>" + product + "\n <b>Quantity: </b>" + quantity + "\n <b>Description: </b>" + description,
         {parse_mode: "HTML"}
     )
+    bot.sendMessage(
+        fitsum,
+        "<b>Order</b> \n <b>Name: </b>" + name + "\n <b>Phone Number: </b>"+ phone_number + "\n <b>Email: </b>" + email + "\n <b>Product: </b>" + product + "\n <b>Quantity: </b>" + quantity + "\n <b>Description: </b>" + description,
+        {parse_mode: "HTML"}
+    )
     res.send('success');  
 })
 
@@ -62,6 +67,11 @@ app.post('/api/message', (req, res, next) =>{
         "<b>Message</b> \n <b>Name: </b>" + name + "\n <b>Phone Number: </b>"+ phone_number + "\n <b>Email: </b>" + email + "\n <b>Message: </b>" + message,
         {parse_mode: "HTML"}
     )
+    bot.sendMessage(
+        fitsum,
+        "<b>Message</b> \n <b>Name: </b>" + name + "\n <b>Phone Number: </b>"+ phone_number + "\n <b>Email: </b>" + email + "\n <b>Message: </b>" + message,
+        {parse_mode: "HTML"}
+    )  
     res.json('success'); 
 })
 
