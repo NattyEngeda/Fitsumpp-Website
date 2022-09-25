@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="absolute bg-gray-300 text-gray-600 body-font w-full border border-gray z-30">
       {/* Top Footer Part */}
-      <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap lg:gap-32 flex-wrap flex-col">
+      <div className="container px-5 2xl:px-20 lg:px-20  py-24 xl:x-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap lg:gap-32 flex-wrap flex-col">
         {/* Fitsum Advert Logo */}
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -67,6 +67,19 @@ export default function Footer() {
                 <Link
                   to='/blog'
                   className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Branding</Link>
+              </li>
+            </nav>
+          </div>
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-lg mb-2">Contact</h2>
+            <hr className='border-primary-500  w-2/4 m-auto mb-3 lg:m-0 lg:mb-3' />
+            <nav className="list-none mb-10 space-y-1">
+              <li>
+              <a href='tel:+251911753962' className='hover:underline hover:text-primary-600 cursor-pointer'>+251 911 753 962</a>
+              </li>
+              <li>
+                <h1
+                  className="text-gray-600 font-semibold hover:text-primary-600 cursor-pointer">Shola, Meseret Building, Addis Ababa, Ethiopia</h1>
               </li>
             </nav>
           </div>

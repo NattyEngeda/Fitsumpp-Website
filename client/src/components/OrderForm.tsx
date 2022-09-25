@@ -102,12 +102,12 @@ export default function OrderForm() {
                     minRows={4}
                     {...form.getInputProps('description')}
                 />
-                <Button
+                <button
                     className='px-4 py-3 h-16 bg-primary-600 shadow-md hover:bg-primary-700 hover:shadow-xl text-xl text-white'
                     type="submit"
                 >
                     Submit
-                </Button>
+                </button>
             </form>
         </>
     )

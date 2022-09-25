@@ -1,7 +1,7 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MenuIcon } from '@heroicons/react/outline'
-import { Menu, Button,Modal } from '@mantine/core';
+import { Menu, Button, Modal } from '@mantine/core';
 import { IconPhoto, IconHome, IconUser, IconShoppingCart, IconNote, IconNews } from '@tabler/icons';
 
 // logo
@@ -15,7 +15,7 @@ import adey3 from '../assets/images/adey3.jpg'
 import '../assets/styles/rotateAdeyAbeba.css'
 
 export default function Header() {
-    const [ adeyOpened, setAdeyOpened ] = useState(false);
+    const [adeyOpened, setAdeyOpened] = useState(false);
 
     return (
         <header className='w-full sticky top-0 right-0 shadow-lg grid md:grid-cols-7 grid-cols-10 z-30'>
@@ -39,8 +39,8 @@ export default function Header() {
                     <ListItems link="/gallery" name="Gallery" />
                     <ListItems link="/about" name="Profile" />
                     <ListItems link="/contact" name="Contact Us" />
-                    <ListItems link="/blog" name="Blog" />
                     <ListItems link="/order" name="Order" />
+                    <ListItems link="/blog" name="Blog" />
                 </div>
                 {/* Hamburg Menu */}
                 <div className='z-40 md:hidden'>
@@ -49,9 +49,9 @@ export default function Header() {
                         shadow="md"
                         width={200}>
                         <Menu.Target>
-                            <Button className='bg-white text-primary-500 p-1'>
-                                <MenuIcon className='w-7 h-7' />
-                            </Button>
+                            <button className='bg-white text-primary-500 p-1 rounded'>
+                                <MenuIcon className='w-8 h-8' />
+                            </button>
                         </Menu.Target>
                         <Menu.Dropdown>
                             <Menu.Label>Pages</Menu.Label>
@@ -79,38 +79,39 @@ export default function Header() {
                             <Menu.Item
                                 className='active:bg-gray-300'
                                 component={Link}
-                                to='/blog'
-                                icon={<IconNews size={14} />}>Blog</Menu.Item>
-                            <Menu.Item
-                                className='active:bg-gray-300'
-                                component={Link}
                                 to='/order'
                                 icon={<IconShoppingCart size={14} />}>Order</Menu.Item>
-                        </Menu.Dropdown>
-                    </Menu>
-                </div>
-                {/* Adey Abeba */}
-                <div className='absolute top-2 md:top-1 right-16 md:right-5 rotateAdey'>
-                   <button
-                   onClick={() => setAdeyOpened(true)}
-                   >
-                   <img 
-                        className='w-20 md:w-28'
-                        src={adey} 
-                        alt="Adey Abeba" /> 
-                   </button>
-                </div>
-                <Modal
-                    opened={adeyOpened}
-                    onClose={()=> setAdeyOpened(false)}
-                    title="Modal"
+                            <Menu.Item
+                            className='active:bg-gray-300'
+                            component={Link}
+                            to='/blog'
+                            icon={<IconNews size={14} />}>Blog</Menu.Item>
+
+                    </Menu.Dropdown>
+                </Menu>
+            </div>
+            {/* Adey Abeba */}
+            <div className='absolute top-2 md:top-1 right-16 md:right-5 rotateAdey'>
+                <button
+                    onClick={() => setAdeyOpened(true)}
                 >
+                    <img
+                        className='w-20 md:w-28'
+                        src={adey}
+                        alt="Adey Abeba" />
+                </button>
+            </div>
+            <Modal
+                opened={adeyOpened}
+                onClose={() => setAdeyOpened(false)}
+                title="መልካም አዲስ አመት"
+            >
                 <div className='w-full h-full'>
                     <img src={adey3} alt="Happy New Year" />
 
                 </div>
-                </Modal>
-            </div>
-        </header>
+            </Modal>
+        </div>
+        </header >
     )
 }

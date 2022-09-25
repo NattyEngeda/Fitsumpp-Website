@@ -25,7 +25,7 @@
         @apply w-10 h-2 bg-primary-500;
     }
     .transBox{
-        @apply transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300;
+        @apply transition ease-in-out delay-150  md:hover:-translate-y-1 md:hover:scale-110  duration-300 ;
     }
     .normshad{
         @apply border border-gray-200;

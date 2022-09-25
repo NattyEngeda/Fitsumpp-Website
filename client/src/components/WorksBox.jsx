@@ -60,7 +60,7 @@ export default function WorksBox(props) {
       {/* Last Content */}
       <div>
         <Group >
-          <Button onClick={() => setOpened(true)} className='h-14 px-10 rounded-none bg-primary-500 hover:bg-primary-700 shadow-md hover:shadow-xl text-white'>Learn More</Button>
+          <button onClick={() => setOpened(true)} className='h-14 px-10 rounded-none bg-primary-500 hover:bg-primary-700 shadow-md hover:shadow-xl text-white'>Learn More</button>
         </Group>
       </div>
     </div>
