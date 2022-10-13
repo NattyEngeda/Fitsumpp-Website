@@ -7,7 +7,7 @@ import { ImageOverlay } from 'react-image-overlay-effect'
 import aos from 'aos';
 import "aos/dist/aos.css"
 // Images
-import fullLogo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
+import fullLogo from '../assets/images/logo/Fitsum Colred Logo_Own Color2.png'
 import img1 from '../assets/images/About Us/Section 2.webp'
 import mission from '../assets/images/AboutPageIcons/mission.png'
 import vission from '../assets/images/AboutPageIcons/vission.png'

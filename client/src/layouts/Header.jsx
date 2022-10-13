@@ -5,7 +5,7 @@ import { Menu, Button, Modal } from '@mantine/core';
 import { IconPhoto, IconHome, IconUser, IconShoppingCart, IconNote, IconNews } from '@tabler/icons';
 
 // logo
-import logo from '../assets/images/logo/F Only Colored Logo.png'
+import logo from '../assets/images/logo/F Only Colored Logo2.png'
 import ListItems from '../components/ListItems'
 // Images
 import adey from '../assets/images/adey.png'
@@ -15,7 +15,6 @@ import adey3 from '../assets/images/adey3.jpg'
 import '../assets/styles/rotateAdeyAbeba.css'
 
 export default function Header() {
-    const [adeyOpened, setAdeyOpened] = useState(false);
 
     return (
         <header className='w-full sticky top-0 right-0 shadow-lg grid md:grid-cols-7 grid-cols-10 z-30'>
@@ -91,26 +90,6 @@ export default function Header() {
                 </Menu>
             </div>
             {/* Adey Abeba */}
-            <div className='absolute top-2 md:top-1 right-16 md:right-5 rotateAdey'>
-                <button
-                    onClick={() => setAdeyOpened(true)}
-                >
-                    <img
-                        className='w-20 md:w-28'
-                        src={adey}
-                        alt="Adey Abeba" />
-                </button>
-            </div>
-            <Modal
-                opened={adeyOpened}
-                onClose={() => setAdeyOpened(false)}
-                title="መልካም አዲስ አመት"
-            >
-                <div className='w-full h-full'>
-                    <img src={adey3} alt="Happy New Year" />
-
-                </div>
-            </Modal>
         </div>
         </header >
     )

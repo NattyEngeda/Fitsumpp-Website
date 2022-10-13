@@ -52,7 +52,7 @@ import logo15 from '../assets/images/Compnays/15.jpg'
 import logo16 from '../assets/images/Compnays/16.png'
 
 
-import logo from '../assets/images/logo/Fitsum Colred Logo_Own Color.png'
+import logo from '../assets/images/logo/Fitsum Colred Logo_Own Color2.png'
 import flogo from '../assets/images/logo/F Only Colored Logo.png'
 import CardsSection8 from '../components/home/CardsSection8';
 
