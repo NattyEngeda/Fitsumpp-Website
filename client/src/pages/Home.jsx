@@ -318,13 +318,13 @@ export default function Home() {
         data-aos='zoom-out-up'
         data-aos-delay='200'
         className="text-gray-600 body-font">
-        <div className="container grid sm:grid-cols-2  py-5 mx-auto">
+        <div className="container grid sm:grid-cols-2 py-5 mx-auto">
           {/* Left Part */}
-          <div className="flex flex-col  w-full mb-20 sm:mb-0 pt-10 ">
+          <div className="flex flex-col  w-full mb-5 sm:mb-0 pt-10 ">
             <img className='w-full' src={logo} alt="Fitsum Advert Logo" />
           </div>
           {/* Roght Part */}
-          <div className="grid sm:grid-cols-2 gap-5 text-center">
+          <div className="grid grid-cols-2 gap-1 text-center">
             {
               Section8Data.map((items) => (
                 <CardsSection8

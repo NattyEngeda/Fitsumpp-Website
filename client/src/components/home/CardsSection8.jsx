@@ -24,9 +24,9 @@ function CardsSection8(props) {
     }
     return (
         <div className="p-4 w-full">
-            <div className="border-2 border-gray-200 flex flex-col  items-center px-4 py-6 rounded-lg shadow-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-gray-50 duration-150 ">
+            <div className="h-[28vh] md:h-auto border-2 border-gray-200 flex flex-col  items-center px-4 py-6 rounded-lg shadow-lg transition ease-in-out delay-150  md:hover:-translate-y-1 md:hover:scale-110 hover:bg-gray-50 duration-150 ">
                 <div>{checkIcon(props.name)}</div>
-                <h2 className="title-font font-medium text-3xl text-gray-900">
+                <h2 className="title-font font-medium text-2xl md:text-3xl text-gray-900">
                     <MiniCardSection8 id={props.id} num={props.num} duration={props.duration} />
                 </h2>
                 <p className="leading-relaxed">{props.desc}</p>

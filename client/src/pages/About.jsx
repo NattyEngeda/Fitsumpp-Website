@@ -313,14 +313,14 @@ export default function About() {
             <div className='w-full  bg-three-600'>
               <div className="">
                 <div
-                  className="flex flex-row justify-between cursor-pointer bg-three-^00 p-5"
+                  className="flex flex-row justify-between cursor-pointer bg-three-600 p-5"
                   onClick={() => setIsActive(!isActive)} >
                   <div>
-                    {mActive === 'MInfa-1' && <p>01. Customer Service</p>}
-                    {mActive === 'MInfa-2' && <p>02. Pre Press</p>}
-                    {mActive === 'MInfa-3' && <p>03. Printing</p>}
-                    {mActive === 'MInfa-4' && <p>04. Finishing</p>}
-                    {mActive === 'MInfa-5' && <p>05. Logestics</p>}
+                    {mActive === 'MInfa-1' && <p className='text-white'>01. Customer Service</p>}
+                    {mActive === 'MInfa-2' && <p className='text-white'>02. Pre Press</p>}
+                    {mActive === 'MInfa-3' && <p className='text-white'>03. Printing</p>}
+                    {mActive === 'MInfa-4' && <p className='text-white'>04. Finishing</p>}
+                    {mActive === 'MInfa-5' && <p className='text-white'>05. Logestics</p>}
                   </div>
                   <div>{isActive ? '-' : '+'}</div>
                 </div>
