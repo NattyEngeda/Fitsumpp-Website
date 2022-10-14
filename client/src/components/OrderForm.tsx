@@ -9,6 +9,7 @@ import 'animate.css'
 import { CheckCircleIcon } from '@heroicons/react/outline';
 
 export default function OrderForm() {
+    const env = import.meta.env;
     const topScroll = () => {
         window.scrollTo(0, 0)
     }
@@ -27,7 +28,7 @@ export default function OrderForm() {
     });
     const handleSubmit = (values: typeof form.values) => {
             axios
-            .post('https://api.fitsumpp.com/order', form.values)
+            .post(env.VITE_SERVER_URL + '/order', form.values)
             .then(response => {
                 if (response.status == 200) {
                     setSendValue(true);

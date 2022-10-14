@@ -6,6 +6,7 @@ import React from 'react';
 import { CheckCircleIcon } from '@heroicons/react/outline';
 
 export default function Modale() {
+  const env = import.meta.env;
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
   const [sendValue, setSendValue] = useState(false);
@@ -23,7 +24,7 @@ export default function Modale() {
   });
   const handleSubmit = (values: typeof form.values) => {
     axios
-      .post('https://api.fitsumpp.com/message', form.values)
+      .post(env.VITE_SERVER_URL + '/message', form.values)
       .then(response => {
         if (response.status == 200) {
           setOpened(false);
