@@ -15,7 +15,7 @@ Fitsum Print and Advert Website is a website made for customers to place order o
 
 ## Authors
 
-- [@nattyengeda](https://www.github.com/nattyengeda)
+- [@natnaelengeda](https://t.me/natnaelengeda)
 
 
 ## Features
